@@ -14,6 +14,11 @@ class usersTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        //下記コードを追加//
+        DB::table('users')->insert([
+            ['name' => 'Atlas七郎'],
+            ['email' => 'Atlas@gmail.com'],
+            ['password' => bcrypt('atlas1')]
+        ]);
     }
 }
