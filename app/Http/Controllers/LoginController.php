@@ -7,7 +7,15 @@ use Illuminate\Http\Request;
 class LoginController extends Controller
 {
     //
-    public function login(){
-        return view('');
+    public function logout(Request $request){
+        Auth::logout();
+        return redirect('/login');
+    }
+}
+
+class LoginController extends Controller
+{
+    public function login (){
+        return view('/login');
     }
 }
