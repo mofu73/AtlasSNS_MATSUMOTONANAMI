@@ -33,3 +33,5 @@ require __DIR__ . '/auth.php';
 
  //  ログアウト
  Route::get('/logout', [LoginController::class, 'logout']);
+
+ Route::post('/register', [RegisteredUserController::class, 'register']);

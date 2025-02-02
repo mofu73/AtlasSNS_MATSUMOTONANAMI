@@ -43,4 +43,15 @@ class RegisteredUserController extends Controller
     {
         return view('auth.added');
     }
+
+    public function register(Request $request){
+        $validated = $request->validate([
+        'username' => ['required', 'digits_between:2,12'],
+        'email' => ['required', 'digits_between:5,40', 'unique:users|email'],
+        'password' => ['required', 'alpha_num', 'digits_between:8,20'],
+        'passwordConfirm' => [Hash::check()],
+        ]);
+
+        return redirect("register");
+    }
 }

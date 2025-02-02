@@ -7,7 +7,7 @@
                 <ul>
                     <li><a href="">ホーム</a></li>
                     <li><a href="">プロフィール</a></li>
-                    <li><a href="">ログアウト</a></li>
+                    <li><a href="logout" class="nav-link http://127.0.0.1:8000/login">ログアウト</a></li>
                 </ul>
             </div>
         </div>
