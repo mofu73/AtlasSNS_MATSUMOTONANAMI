@@ -30,6 +30,13 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
+        $validated = $request->validate([
+        'username' => 'required|between:2,12',
+        'email' => 'required|between:5,40|unique:users|email',
+        'password' => 'required|alpha_num|between:8,20|confirmed',
+        'password_confirmation' => 'required|alpha_num|between:8,20',
+        ]);
+
         User::create([
             'username' => $request->username,
             'email' => $request->email,
@@ -43,17 +50,4 @@ class RegisteredUserController extends Controller
     {
         return view('auth.added');
     }
-
-    public function register(Request $request){
-        $request->validate([
-        'username' => 'required|digits_between:2,12',
-        'email' => 'required|digits_between:5,40|unique:users|email',
-        'password' => 'required|alpha_num|digits_between:8,20|confirmed',
-        'password_confirmation' => 'required',
-        ]);
-
-        $name = request->input('username');
-        username::register(['username' => $username]);
-        return back();
         }
-    }
