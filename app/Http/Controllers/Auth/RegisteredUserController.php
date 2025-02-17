@@ -31,10 +31,10 @@ class RegisteredUserController extends Controller
     public function store(Request $request): RedirectResponse
     {
         $validated = $request->validate([
-        'username' => 'required|between:2,12',
-        'email' => 'required|between:5,40|unique:users|email',
-        'password' => 'required|alpha_num|between:8,20|confirmed',
-        'password_confirmation' => 'required|alpha_num|between:8,20',
+        'username' => 'required', 'string', 'alpha_num:ascii', 'between:2,12',
+        'email' => 'required', 'between:5,40', 'unique:users', 'email',
+        'password' => 'required', 'alpha_num', 'between:8,20', 'confirmed',
+        'password_confirmation' => 'required', 'alpha_num:ascii', 'between:8,20',
         ]);
 
         User::create([
@@ -50,4 +50,5 @@ class RegisteredUserController extends Controller
     {
         return view('auth.added');
     }
+
         }

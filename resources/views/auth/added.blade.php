@@ -1,6 +1,8 @@
 <x-logout-layout>
   <div id="clear">
-    <p></p>
+    @if (Auth::check())
+    <p>{{Auth::user()->username}}さん</p>
+    @endif
     <p>ようこそ！AtlasSNSへ！</p>
     <p>ユーザー登録が完了しました。</p>
     <p>早速ログインをしてみましょう。</p>

@@ -15,7 +15,7 @@
     @endif
 
 {{ Form::label('ユーザー名') }}
-{{ Form::text('$username',null,['class' => 'input']) }}
+{{ Form::text('username',null,['class' => 'input']) }}
 
 {{ Form::label('メールアドレス') }}
 {{ Form::email('email',null,['class' => 'input']) }}
