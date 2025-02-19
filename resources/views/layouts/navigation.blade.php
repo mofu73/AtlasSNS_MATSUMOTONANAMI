@@ -6,8 +6,8 @@
                 </div>
                 <nav class="menu">
                  <ul>
-                    <li><a href="/top">ホーム</a></li>
-                    <li><a href="/profile">プロフィール</a></li>
+                    <li><a href="top">ホーム</a></li>
+                    <li><a href="profile">プロフィール編集</a></li>
                     <li><a href="logout" class="nav-link http://127.0.0.1:8000/login">ログアウト</a></li>
                  </ul>
                 </nav>

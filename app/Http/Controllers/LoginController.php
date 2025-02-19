@@ -14,6 +14,10 @@ class LoginController extends Controller
         $request->session()->regenerateToken();
         return redirect('/login');
     }
+
+    public function __construct(){
+        $this->middleware('auth');
+    }
 }
 
 //class LoginController extends Controller
