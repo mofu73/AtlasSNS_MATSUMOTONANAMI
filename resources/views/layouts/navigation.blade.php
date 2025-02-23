@@ -4,6 +4,7 @@
                 <div id="side-bar">
                     <p>{{\Auth::user()->username}}さん</p>
                 </div>
+
                 <nav class="menu">
                  <ul>
                     <li><a href="top">ホーム</a></li>
