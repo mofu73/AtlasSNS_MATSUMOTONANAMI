@@ -12,6 +12,6 @@ class UsersController extends Controller
     }
 
     public function index(){
-        return redirect('search');
+        return redirect('users.search');
     }
 }

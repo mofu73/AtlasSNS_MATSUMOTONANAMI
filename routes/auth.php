@@ -18,3 +18,17 @@ Route::middleware('guest')->group(function () {
     Route::post('added', [RegisteredUserController::class, 'added']);
 
 });
+
+Route::middleware('auth:users')->group(function () {
+     Route::get('/top', [PostsController::class, 'index']);
+
+ Route::get('/profile', [ProfileController::class, 'profile']);
+
+ Route::get('/search', [UsersController::class, 'index']);
+
+ Route::get('/follow-list', [PostsController::class, 'index']);
+ Route::get('/follower-list', [PostsController::class, 'index']);
+
+ //  ログアウト
+ Route::get('/logout', [LoginController::class, 'logout']);
+});
