@@ -28,7 +28,7 @@ class RegisteredUserController extends Controller
      *
      * @throws \Illuminate\Validation\ValidationException
      */
-    public function store(Request $request): RedirectResponse
+    public function store(Request $request)
     {
         $validated = $request->validate([
         'username' => 'required', 'string', 'alpha_num:ascii', 'between:2,12',
@@ -50,5 +50,4 @@ class RegisteredUserController extends Controller
     {
         return view('auth.added');
     }
-
         }
