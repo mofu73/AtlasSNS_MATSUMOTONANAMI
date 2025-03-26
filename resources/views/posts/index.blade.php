@@ -1,12 +1,12 @@
 <x-login-layout>
 <div id="container">
-    {{ Form::open(['url' => '/posts/create']) }}
-  <div class="form-group">
+    {{ Form::open(['url' => 'index']) }}
     <a><img src="images/icon1.png"></a>
+  <div class="form-group">
       {{ Form::input('text', 'post', null,['required', 'class' => 'form-control', 'placeholder' => '投稿内容を入力してください。'])}}
-    {{ Form::close() }}
-    <a href="/post"><img src="images/post.png"></a>
+      <input type="image" src="/images/post.png" alt="投稿">
   </div>
+  {{ Form::close() }}
 </div>
 
 </x-login-layout>

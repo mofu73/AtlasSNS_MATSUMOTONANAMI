@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class PostsController extends Controller
 {
@@ -11,14 +12,17 @@ class PostsController extends Controller
         return view('posts.index');
     }
 
-    //投稿の作成
+    //登録処理
     public function store(Request $request){
+        $registerPost = $this->post->InsertPost($request);
+        return redirect()->route('posts.index');
+
         $validated = $request->validate([
             'post' => 'required', 'alpha', 'between:1,150',
         ]);
 
-    }
-    public function create(){
-        return redirect('/top');
+        //$post = $request->input('post');
+        //Post::store(['post' => $post]);
+        //return back();
     }
 }

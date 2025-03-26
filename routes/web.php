@@ -23,16 +23,20 @@ require __DIR__ . '/auth.php';
 //  Route::get('/login', [LoginController::class, 'login']);
  //ログイン中のページ
  Route::get('/top', [PostsController::class, 'index']);
- Route::post('/post', [PostsController::class, 'store']);
 
+ //登録
+ Route::post('store', [PostsController::class, 'store']);
+
+  Route::post('/index', [PostsController::class, 'index']);
+
+  //プロフィール表示
  Route::get('/profile', [ProfileController::class, 'profile']);
 
+ //ユーザー検索
  Route::get('/search', [UsersController::class, 'index']);
 
  Route::get('/follow-list', [PostsController::class, 'index']);
  Route::get('/follower-list', [PostsController::class, 'index']);
-
- Route::get('/post', [PostsController::class, 'index']);
 
  //  ログアウト
  Route::get('/logout', [LoginController::class, 'logout']);

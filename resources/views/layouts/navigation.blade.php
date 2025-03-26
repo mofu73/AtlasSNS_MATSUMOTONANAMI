@@ -5,12 +5,13 @@
                     <p>{{\Auth::user()->username}}さん</p>
                 </div>
 
+                <div class="accordion">
                 <nav class="menu">
-                 <ul>
+                  <ul>
                     <li><a href="top">ホーム</a></li>
                     <li><a href="profile">プロフィール編集</a></li>
                     <li><a href="logout" class="nav-link http://127.0.0.1:8000/login">ログアウト</a></li>
-                 </ul>
+                  </ul>
                 </nav>
             </div>
         </div>
