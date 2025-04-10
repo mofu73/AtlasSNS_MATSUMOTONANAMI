@@ -11,5 +11,11 @@ class Post extends Model
 
     protected $fillable = [
         'post',
+        'user_id'
     ];
+
+    //リレーション
+    public function user(){
+        return $this->belongsTo('App\Models\User');
+    }
 }

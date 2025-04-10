@@ -27,7 +27,10 @@ require __DIR__ . '/auth.php';
  //登録
  Route::post('store', [PostsController::class, 'store']);
 
-  Route::post('/index', [PostsController::class, 'index']);
+ Route::post('/index', [PostsController::class, 'index']);
+
+  //投稿追加
+ Route::post('/create', [PostsController::class, 'create']);
 
   //プロフィール表示
  Route::get('/profile', [ProfileController::class, 'profile']);
