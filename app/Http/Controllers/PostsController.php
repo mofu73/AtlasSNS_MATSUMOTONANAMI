@@ -19,8 +19,8 @@ class PostsController extends Controller
     }
 
     public function posts(){
-        $posts = Post::get();
-        return view('posts.index',[$post=>'post']);
+        $posts = Post::all();
+        return view('posts.index',['posts'=>$posts]);
     }
 
     //登録処理

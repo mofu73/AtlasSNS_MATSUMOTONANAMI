@@ -23,6 +23,8 @@ require __DIR__ . '/auth.php';
 //  Route::get('/login', [LoginController::class, 'login']);
  //ログイン中のページ
  Route::get('/top', [PostsController::class, 'index']);
+ Route::post('/top', [PostsController::class, 'index']);
+
 
  //登録
  Route::post('store', [PostsController::class, 'store']);

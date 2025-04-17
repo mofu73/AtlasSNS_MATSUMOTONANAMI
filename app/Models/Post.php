@@ -11,7 +11,9 @@ class Post extends Model
 
     protected $fillable = [
         'post',
-        'user_id'
+        'user_id',
+        'created_at',
+        'updated_at',
     ];
 
     //リレーション
