@@ -11,30 +11,29 @@ use App\Models\User;
 class PostsController extends Controller
 {
     //投稿の表示
-    public function index(){
+    public function index(Post $posts){
         $user = Auth::user();//ログインしてるユーザー情報取得
         $username = Auth::user()->username;
         $posts = Post::get();
-        return view('posts.index');
+        return view('posts.index',['posts'=>$posts]);
     }
 
     public function posts(){
-        $posts = Post::all();
-        return view('posts.index',['posts'=>$posts]);
+        $post = Post::all();
     }
 
     //登録処理
     public function create(Request $request){
          $request->validate([
-            'posts' => 'required|alpha|between:1,150',
+            'post' => 'required|alpha|between:1,150',
         ]);
+        $post = $request->newPost;
 
-        $post = $request->input('newPost');
-        $user_id=Auth::user()->id;
-
+        $user_id = $request->input('user_id');
+        $post = $request->input('post');
         Post::create([
             'post' => $post,
-            'user_id' => $user_id
+            'user_id' => Auth::user()->id,
         ]);
         return redirect('/top');
     }
