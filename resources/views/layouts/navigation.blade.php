@@ -1,10 +1,11 @@
         <div id="head">
             <h1><a href="/top"><img src="images/atlas.png"></a></h1>
             <div id="">
-                <div class="side_bar">
+                <div class="side_user">
                     <p>{{\Auth::user()->username}}さん</p>
-                 </div>
+                </div>
 
+                <div class="accordion">
                 <nav class="menu">
                    <ul>
                     <li><a href="top">ホーム</a></li>

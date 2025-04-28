@@ -11,11 +11,15 @@
 
 <a><img src="images/icon1.png"></a>
  @foreach ($posts as $post)
-  <tr>
-    <td>{{ $post->user->username }}</td>
-    <td>{{ $post->post }}</td>
-    <td>{{ $post->created_at }}</td>
- </tr>
+ <ul>
+  <div class="post_content2">
+    <div class="post_info">
+     <li class="post_name">{{ $post->user->username }}</li>
+     <li class="post_time">{{ $post->created_at }}</li>
+    </div>
+     <li class="post_post ">{{ $post->post }}</li>
+  </div>
+ </ul>
  @endforeach
 
 
