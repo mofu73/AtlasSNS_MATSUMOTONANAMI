@@ -11,11 +11,11 @@ use App\Models\User;
 class PostsController extends Controller
 {
     //投稿の表示
-    public function index(Post $posts){
+    public function index(){
         $user = Auth::user();//ログインしてるユーザー情報取得
         $username = Auth::user()->username;
-        $posts = Post::get();
-        return view('posts.index',['posts'=>$posts]);
+        $post = Post::get();
+        return view('posts.index',['posts'=>$post]);
     }
 
     public function posts(){
@@ -27,13 +27,14 @@ class PostsController extends Controller
          $request->validate([
             'post' => 'required|alpha|between:1,150',
         ]);
-        $post = $request->newPost;
 
-        $user_id = $request->input('user_id');
+        $post = $request->newPost;
+        $user_id = Auth::user()->id;
         $post = $request->input('post');
+
         Post::create([
             'post' => $post,
-            'user_id' => Auth::user()->id,
+            'user_id' => $user_id,
         ]);
         return redirect('/top');
     }

@@ -9,12 +9,14 @@
   {!! Form::close() !!}
 </div>
 
+<a><img src="images/icon1.png"></a>
  @foreach ($posts as $post)
   <tr>
-    <td>{{ $post->user->user_id }}</td>
+    <td>{{ $post->user->username }}</td>
     <td>{{ $post->post }}</td>
     <td>{{ $post->created_at }}</td>
  </tr>
  @endforeach
+
 
 </x-login-layout>
