@@ -10,16 +10,18 @@
 </div>
 
 <a><img src="images/icon1.png"></a>
- @foreach ($posts as $post)
- <ul>
+ @foreach ($lists as $list)
+ <tr>
   <div class="post_content2">
-    <div class="post_info">
-     <li class="post_name">{{ $post->user->username }}</li>
-     <li class="post_time">{{ $post->created_at }}</li>
-    </div>
-     <li class="post_post ">{{ $post->post }}</li>
+     <td>{{ $list->user->username }}</td>
+     <td>{{ $list->user_id }}</td>
+     <td>{{ $list->post }}</td>
+     <td>{{ $list->created_at }}</td>
+     <td><a class="js-modal-open" href="" post="{{ $post-post }}" post_id="{{ $post->id }}"><img class="Update" src="images/edit.png" alt="編集"></a></td>
+     <!-- 削除-->
+      <td><a class="btn btn danger" href="">
   </div>
- </ul>
+ </tr>
  @endforeach
 
 
