@@ -33,7 +33,7 @@ class User extends Authenticatable
         'remember_token',
     ];
 
-    public function posts(){
+    public function post(){
         return $this->hasMany('App\Models\Post');
     }
 }

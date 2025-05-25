@@ -5,24 +5,22 @@
   <div class="form-group">
       {{ Form::input('text', 'newPost', null,['required', 'class' => 'form-control', 'placeholder' => '投稿内容を入力してください。'])}}
   </div>
-      <input type="image" src="/images/post.png" alt="投稿">
+      <input type="image" src="/images/post.png" alt="自分が投稿した内容を表示します。
+      投稿は最大150文字までとし、それ以上のテキストが入力フォームに撃ち込まれた場合は投稿できないように設定をしてください。
+      トップでは自分がフォローしている人の投稿も見ることができるようにします。">
   {!! Form::close() !!}
 </div>
-
-<a><img src="images/icon1.png"></a>
- @foreach ($lists as $list)
+@foreach ($posts as $post)
  <tr>
-  <div class="post_content2">
-     <td>{{ $list->user->username }}</td>
-     <td>{{ $list->user_id }}</td>
-     <td>{{ $list->post }}</td>
-     <td>{{ $list->created_at }}</td>
-     <td><a class="js-modal-open" href="" post="{{ $post-post }}" post_id="{{ $post->id }}"><img class="Update" src="images/edit.png" alt="編集"></a></td>
-     <!-- 削除-->
-      <td><a class="btn btn danger" href="">
-  </div>
- </tr>
- @endforeach
+  <table class="table table-hover">
+     <a><img src="images/icon1.png"></a>
+     <td>{{ $post->user->username }}</td>
+     <td>{{ $post->post }}</td>
+     <td>{{ $post->created_at }}</td>
+  </table>
+@endforeach
 
+
+</tr>
 
 </x-login-layout>
