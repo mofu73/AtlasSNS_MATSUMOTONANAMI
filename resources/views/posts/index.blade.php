@@ -11,16 +11,25 @@
   {!! Form::close() !!}
 </div>
 @foreach ($posts as $post)
- <tr>
-  <table class="table table-hover">
+<table class="table table-hover">
+<tr>
      <a><img src="images/icon1.png"></a>
      <td>{{ $post->user->username }}</td>
      <td>{{ $post->post }}</td>
      <td>{{ $post->created_at }}</td>
-  </table>
-@endforeach
+  <!-- 更新　-->
+  <div class="content">
+  <td><a class="js-modal-open" href="/top/update" post="{{ $posts-post }}" post_id="{{ $posts->id }}">
+    <img src="images/edit.png" alt="編集">
+  </a></td>
 
-
+  <!-- 削除-->
+  <td><a class="btn btn danger" href="/post/{{$post-id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')">
+    <img class="Trash" src="images/trash.png" alt="削除"></a>
+   </td>
 </tr>
+
+@endforeach
+</table>
 
 </x-login-layout>

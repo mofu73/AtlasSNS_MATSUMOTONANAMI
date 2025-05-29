@@ -13,9 +13,8 @@ class PostsController extends Controller
     //投稿の表示
     public function index(){
         $user = Auth::user();//ログインしてるユーザー情報取得
-        $username = Auth::user()->username;
-        $posts = Post::get();
-        return view('posts.index',['posts'=>$posts]);
+        $post = Post::get();
+        return view('posts.index',['posts'=>$post]);
     }
 
     //登録処理
@@ -37,13 +36,11 @@ class PostsController extends Controller
         $id = $request->input('id');
         $up_post = $request->input('upPost');
 
-        Post::where('id', $id)->update([
-            'post' => $up_post,
-        ]);
+        $post = Post::where('id', $id)->first();
         return redirect('/top');
     }
 
-        public function delete(Request $request){
+    public function delete(Request $request){
             Post::where('id', $id)->delete();
             return redirect('/top');
     }
