@@ -19,7 +19,7 @@
      <td>{{ $post->created_at }}</td>
   <!-- 更新　-->
   <div class="content">
-  <td><a class="js-modal-open" href="/top/update" post="{{ $posts-post }}" post_id="{{ $posts->id }}">
+  <td><a class="js-modal-open" href="/top/update" post="{{ $posts->post }}" post_id="{{ $posts->id }}">
     <img src="images/edit.png" alt="編集">
   </a></td>
 
@@ -28,7 +28,6 @@
     <img class="Trash" src="images/trash.png" alt="削除"></a>
    </td>
 </tr>
-
 @endforeach
 </table>
 
