@@ -20,7 +20,7 @@ class PostsController extends Controller
     //登録処理
     public function create(Request $request){
          $request->validate([
-            'post' => 'required|alpha|between:1,150',
+            'post' => 'required|between:1,150',
         ]);
 
         $post = $request->input ('newPost');

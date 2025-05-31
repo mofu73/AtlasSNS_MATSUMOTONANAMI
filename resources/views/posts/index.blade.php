@@ -1,6 +1,6 @@
 <x-login-layout>
 <div id="container">
-    {!! Form::open(['url' => '/top']) !!}
+    {!! Form::open(['url' => '/top/update']) !!}
     <a><img src="images/icon1.png"></a>
   <div class="form-group">
       {{ Form::input('text', 'newPost', null,['required', 'class' => 'form-control', 'placeholder' => '投稿内容を入力してください。'])}}
@@ -19,12 +19,12 @@
      <td>{{ $post->created_at }}</td>
   <!-- 更新　-->
   <div class="content">
-  <td><a class="js-modal-open" href="/top/update" post="{{ $posts->post }}" post_id="{{ $posts->id }}">
+  <td><a class="js-modal-open" href="/top/update" post="{{ $post->post }}" post_id="{{ $post->id }}">
     <img src="images/edit.png" alt="編集">
   </a></td>
 
   <!-- 削除-->
-  <td><a class="btn btn danger" href="/post/{{$post-id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')">
+  <td><a class="btn btn danger" href="/post/{{$post->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')">
     <img class="Trash" src="images/trash.png" alt="削除"></a>
    </td>
 </tr>
