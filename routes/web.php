@@ -43,6 +43,8 @@ require __DIR__ . '/auth.php';
  //編集処理
  Route::post('/top/update', [PostController::class, 'update']);
 
+ Route::get('/top/update', [PostController::class, 'update']);
+
  Route::get('/follow-list', [PostsController::class, 'index']);
  Route::get('/follower-list', [PostsController::class, 'index']);
 

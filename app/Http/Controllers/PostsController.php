@@ -39,7 +39,7 @@ class PostsController extends Controller
         Post::where('id', $id)->update
         (['post' =>$up_post]);
 
-        return redirect('/top');
+        return redirect('/top/update');
     }
 
     public function delete(Request $request){
