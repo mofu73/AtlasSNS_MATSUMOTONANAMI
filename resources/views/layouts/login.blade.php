@@ -33,9 +33,9 @@
     <div id="container">
       {{ $slot }}
     </div>
-    <div id="side-bar">
+    <div class="side-user">
       <div id="confirm">
-        <p>{{\Auth::user()->username}}さんの</p>
+        <p>{{Auth::user()->username}}さん</p>
         <div>
           <p>フォロー数</p>
           <p>〇〇名</p>
