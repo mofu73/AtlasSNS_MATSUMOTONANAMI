@@ -17,22 +17,19 @@
      <td>{{ $post->post }}</td>
      <td>{{ $post->created_at }}</td>
 
-  @if ($user_id == $post->id)
-  <!-- 更新　-->
-  <div class="content">
-  <td><a class="js-modal-open" href="/top/update" post="{{ $post->post }}" post_id="{{ $post->id }}">
+   <!-- 更新　-->
+   <div class="content">
+   <td><a class="js-modal-open" href="/top/update" post="{{ $post->post }}" post_id="{{ $post->id }}">
     <img src="images/edit.png" alt="編集">
-  </a></td>
+   </a></td>
 
-  <!-- 削除-->
-  <td><a class="btn btn danger" href="/post/{{$post->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')">
+   <!-- 削除-->
+   <td><a class="btn btn danger" href="/post/{{$post->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')">
     <img class="Trash" src="images/trash.png" alt="削除"></a>
    </td>
-  <@endif>
 </tr>
-@endforeach
 </table>
-
+@endforeach
 <!-- モーダルの中 -->
 
 </x-login-layout>

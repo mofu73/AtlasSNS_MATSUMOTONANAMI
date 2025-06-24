@@ -5,6 +5,7 @@
             <!--アコーディオンメニュー -->
             <div class="accordion-container">
             <p>{{Auth::user()->username}}さん</p>
+
             <div class="accordion-title js-accordion-title">
             </div>
                 <ul class="menu">

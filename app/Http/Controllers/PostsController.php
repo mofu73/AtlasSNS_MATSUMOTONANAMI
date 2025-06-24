@@ -15,7 +15,6 @@ class PostsController extends Controller
         $user = Auth::user();//ログインしてるユーザー情報取得
         $post = Post::get();
         return view('posts.index',['posts'=>$post]);
-        $following_id = Auth::user()->follows()->pluck('followed_id');//フォローしているユーザーidを取得
         $post = Post::with('user')->whereIn('user_id', $user)->orwhere('user_id', $following_id)->get();//フォローしているユーザーidの投稿内容を取得
     }
 
@@ -37,14 +36,16 @@ class PostsController extends Controller
     public function update(Request $request){
         $id = $request->input('id');
         $up_post = $request->input('upPost');
+        $user_id = Auth::id();
         //dd($up_post);
+
         Post::where('id', $id)->update
         (['post' =>$up_post]);
 
-        return redirect('/top/update');
+        return redirect('/top');
     }
 
-    public function delete(Request $request){
+    public function delete($id){
             Post::where('id', $id)->delete();
             return redirect('/top');
     }

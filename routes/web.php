@@ -43,6 +43,9 @@ require __DIR__ . '/auth.php';
  //編集処理
  Route::get('/top/update', [PostsController::class, 'update']);
 
+ //削除処理
+ Route::get('/top/delete', [PostsController::class, 'delete']);
+
  Route::get('/follow-list', [PostsController::class, 'index']);
  Route::get('/follower-list', [PostsController::class, 'index']);
 

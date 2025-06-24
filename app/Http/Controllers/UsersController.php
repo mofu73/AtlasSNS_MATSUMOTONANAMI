@@ -7,8 +7,17 @@ use Illuminate\Http\Request;
 class UsersController extends Controller
 {
     //
-    public function search(){
-        return view('users.search');
+    public function profile(){
+        return view('users.profile');
+    }
+
+    public function search(Request $request){
+        $keyword = $request->input('keyword');//変数の定義
+        $query = Post::query();
+        if(!empty($keyword)){
+            $query->where('username', 'LIKE', "%{$keyword}%");
+        }
+        return view('search.index',['search'=>$search]);
     }
 
     public function index(){
