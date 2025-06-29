@@ -15,9 +15,9 @@ class UsersController extends Controller
         $keyword = $request->input('keyword');//変数の定義
         $query = Post::query();
         if(!empty($keyword)){
-            $query->where('username', 'LIKE', "%{$keyword}%");
+            $query->where('username', 'LIKE', "%{$keyword}%")->get();
         }
-        return view('search.index',['search'=>$search]);
+        return view('users.search');
     }
 
     public function index(){
