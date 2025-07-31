@@ -19,18 +19,17 @@ header{
 #side-bar{
     flex: 0 0 19%;
     border-left: 1px solid #727272;
+    right: 0;
+        width: 20%;
 }
 
 /* アコーディオンメニュー */
 .accordion-container {
     display: flex;
     position: relative;
-    border-top: none;
-    outline: 0;
-    cursor: pointer;
 }
 
-.accordion-container .accordion-title {
+/*.accordion-container .accordion-title {
     display: block;
     position: relative;
     font-size: 1.25em;
@@ -40,4 +39,15 @@ header{
     width: 50px;
     height: 17px;
     padding-left: 50px;
+}
+
+*/ .menu ul {
+    display: none;
+    font-size: 15px;
+    position: absolute;
+    text-align: center;
+    top: 130%;
+    font-weight: bold;
+    border: solid 2px;
+    z-index: 2;
 }
