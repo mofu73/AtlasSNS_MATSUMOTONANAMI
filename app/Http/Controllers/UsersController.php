@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class UsersController extends Controller
 {
@@ -13,11 +14,13 @@ class UsersController extends Controller
 
     public function search(Request $request){
         $keyword = $request->input('keyword');//変数の定義
-        $query = Post::query();
+        $query = User::query();
         if(!empty($keyword)){
             $query->where('username', 'LIKE', "%{$keyword}%")->get();
+        }else{
+            $query = User::all();
         }
-        return view('users.search');
+        return view('users.search',['query'=>$query]);
     }
 
     public function index(){

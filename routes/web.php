@@ -38,13 +38,13 @@ require __DIR__ . '/auth.php';
  Route::get('/profile', [ProfileController::class, 'profile']);
 
  //ユーザー検索
- Route::get('/search', [UsersController::class, 'index']);
+ Route::get('/search', [UsersController::class, 'search']);
 
  //編集処理
  Route::get('/top/update', [PostsController::class, 'update']);
 
  //削除処理
- Route::get('/top/delete', [PostsController::class, 'delete']);
+ Route::get('/post/{id}/delete', [PostsController::class, 'delete']);
 
  Route::get('/follow-list', [PostsController::class, 'index']);
  Route::get('/follower-list', [PostsController::class, 'index']);
