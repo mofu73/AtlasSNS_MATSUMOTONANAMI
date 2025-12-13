@@ -16,7 +16,7 @@ class UsersController extends Controller
         $keyword = $request->input('keyword');//変数の定義
         $query = User::query();
         if(!empty($keyword)){
-            $query->where('username', 'LIKE', "%{$keyword}%")->get();
+            $query = User::where('username', 'LIKE', '%'.$keyword. '%')->get();
         }else{
             $query = User::all();
         }

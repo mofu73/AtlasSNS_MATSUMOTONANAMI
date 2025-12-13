@@ -11,7 +11,10 @@
 </div>
 <div>
   @foreach ($query as $query)
-  {{ $query->username}}
+  <a><img src="images/icon2.png"></a>
+  <option value="{{ $query}}">
+   {{ $query->username}}
+  </option>
   @endforeach
 </div>
 </x-login-layout>
