@@ -20,7 +20,7 @@ class UsersController extends Controller
         }else{
             $query = User::all();
         }
-        return view('users.search',['query'=>$query]);
+        return view('users.search',['query'=>$query, 'keyword'=>$keyword]);
     }
 
     public function index(){

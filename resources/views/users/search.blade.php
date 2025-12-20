@@ -6,15 +6,18 @@
   </form>
 
   @if(!empty($keyword))
-  <p>検索ワード:{{$keyword}}</p>
+  <h3>検索ワード:{{$keyword}}</h3>
   @endif
 </div>
 <div>
   @foreach ($query as $query)
+  @if($query->id !== Auth::user()->id)
   <a><img src="images/icon2.png"></a>
   <option value="{{ $query}}">
    {{ $query->username}}
   </option>
+  <button type="submit" class="btn btn-success pull-right">フォローする</button>
+    @endif
   @endforeach
 </div>
 </x-login-layout>
