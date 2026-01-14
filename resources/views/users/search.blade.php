@@ -16,8 +16,18 @@
   <option value="{{ $query}}">
    {{ $query->username}}
   </option>
-  <button type="submit" class="btn btn-success pull-right">フォローする</button>
-    @endif
+  @if(!auth()->user()->isFollowing($query->id))
+  <form action="/search.blade/{{ $query->id }}/follow" method="post">
+    @csrf
+  <button type="submit" class="btn btn-info pull-right">フォローする</button>
+</form>
+@else
+<form action="/search.blade/{{ $query->id }}/unfollow" method="post">
+    @csrf
+  <button type="submit" class="btn btn-danger pull-right">フォロー解除</button>
+</form>
+  @endif
+  @endif
   @endforeach
 </div>
 </x-login-layout>
