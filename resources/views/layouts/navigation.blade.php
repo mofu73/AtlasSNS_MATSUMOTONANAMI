@@ -3,18 +3,18 @@
             <div id="">
             <div class="side_user">
             <!--アコーディオンメニュー -->
-            <div class="accordion-container">
-            <p>{{Auth::user()->username}}さん</p>
-
-            <div class="accordion-title js-accordion-title">
+            <div class="accordion">
+               <div class="accordion-contents">
+                <dl class="accordion-list">
+                 <dt class="accordion-title js-accordion-title">
+                 {{Auth::user()->username }}さん</dt>
+                 <dd class="accordion-text">
+                    <div class="accordion-box">
+                     <li><a class="home" href="/top">ホーム</a></li>
+                     <li><a class="profile" href="/profile">プロフィール編集</a></li>
+                     <li><a class="logout" href="/logout" class="nav-link http://127.0.0.1:8000/login">ログアウト</a></li>
+                    </div>
+                 </dd>
+                </dl>
+               </div>
             </div>
-            <div id="users">
-              <ul class="menu">
-                      <li><a class="home" href="/top">ホーム</a></li>
-                      <li><a class="profile" href="/profile">プロフィール編集</a></li>
-                      <li><a class="logout" href="/logout" class="nav-link http://127.0.0.1:8000/login">ログアウト</a></li>
-              </ul>
-            </div>
-            <div class="icon">
-            <img src=" {{ asset('images/icon1.png') }}"></div>
-        </div>

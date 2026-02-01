@@ -57,7 +57,7 @@ class User extends Authenticatable
         return (boolean) $this->follows()->where('following_id', $user_id)->first(['follows.id']);
     }
 
-
+    //リレーション
     public function post(){
         return $this->hasMany('App\Models\Post');
     }

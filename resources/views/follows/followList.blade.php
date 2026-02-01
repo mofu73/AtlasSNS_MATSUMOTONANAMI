@@ -5,16 +5,22 @@
 <!-- フォローしている人のアイコン一覧 -->
 <div class="">
   <hi>フォローリスト</h1>
-  <div class="follow_icon">
-    @foreach($followings as $following)
-    <a><img src="{{ asset('storage/' .$following->images) }}" alt="フォローアイコン"></a>
-    @endforeach
+  <div class="user_icon">
   </div>
 </div>
 
-@foreach($posts as $post)
- <p>名前:{{ $post->user->username }}</p>
- <p>投稿内容:{{ $post->post }}</p>
+<!-- foreach($followings as $following)
+ <p>{ $following->username }</p>
+ <p>{ $following->post }</p>
+endforeach -->
+
+
+@foreach($followings_post as $following_post)
+<tr>
+ <td>{{ $following_post->user->username }}</td>
+ <td>{{ $following_post->post }}</td>
+ <td>{{ $following_post->created_at }}</td>
+</tr>
 @endforeach
 
 </x-login-layout>

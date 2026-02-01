@@ -3,17 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\User;
+use App\Models\User;
+use App\Models\Post;
 use App\Models\Follow;
+use Illuminate\support\Facades\Auth;
+
 
 class FollowsController extends Controller
 {
-    //
     public function follow(){
-        $following_id = Auth::user()->follows()->pluck('following_user_id');//
-        $followings = User::WhereIn('user_id', $following_id)->get();
-        return view('follows.followList');
+        $following_id = Auth::user()->follows()->pluck('following_id');
+        $followings = User::WhereIn('id', $following_id)->get();
+        $followings_post = Post::query()->WhereIn('user_id', Auth::user()->follows()->pluck('following_id'))->latest()->get();
+        return view('follows.followList', ['followings'=>$followings, 'followings_post'=>$followings_post]);
     }
+
     //フォロー
     public function follows($id){
         $follower = auth()->user();
