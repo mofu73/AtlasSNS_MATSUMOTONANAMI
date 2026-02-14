@@ -114,6 +114,7 @@ a:hover {
   font-size: 16px;
   font-weight: bold;
   position: relative;
+  /*text-align: right; */
 }
 
 .accordion-contents {
@@ -122,12 +123,15 @@ a:hover {
 
 .accordion-text {
   padding: 24px 50px 24px 24px;
+  position: relative;
 }
 
 .accordion-box {
   color: #000000;
   line-height: 1.5;
-  position: relative;
+  position: absolute;
+    right: 0;
+    bottom: o;
 }
 
 /* 矢印 */
@@ -153,6 +157,7 @@ a:hover {
   top: 45%;
   transform: rotate(-45deg);
 }
+
 b,
 optgroup,
 strong {

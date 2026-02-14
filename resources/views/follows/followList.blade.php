@@ -1,12 +1,8 @@
 <x-login-layout>
 
-
-  <h2>機能を実装していきましょう。</h2>
 <!-- フォローしている人のアイコン一覧 -->
 <div class="">
-  <hi>フォローリスト</h1>
-  <div class="user_icon">
-  </div>
+  <h1>フォローリスト</h1>
 </div>
 
 <!-- foreach($followings as $following)
