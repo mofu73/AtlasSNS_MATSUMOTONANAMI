@@ -137,6 +137,7 @@ a:hover {
 /* 矢印 */
 .accordion-title {
   position: relative;
+  text-align: center;
 }
 
 .accordion-title::after {

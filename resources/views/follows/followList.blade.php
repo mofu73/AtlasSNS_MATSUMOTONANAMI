@@ -10,6 +10,9 @@
  <p>{ $following->post }</p>
 endforeach -->
 
+@foreach($followed_id as $followed_id)
+ <img src="{{ asset('images/icon1.png, icon2.png') }}" alt="">
+@endforeach
 
 @foreach($followings_post as $following_post)
 <tr>

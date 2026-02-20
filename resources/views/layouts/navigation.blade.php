@@ -11,7 +11,7 @@
                    <dd class="accordion-text">
                       <div class="accordion-box">
                   <ul>
-                     <li><a class="home" href="/top">ホーム</a></li>
+                     <li><a class="home" href="/top">HOME</a></li>
                      <li><a class="profile" href="/profile">プロフィール編集</a></li>
                      <li><a class="logout" href="/logout" class="nav-link http://127.0.0.1:8000/login">ログアウト</a></li>
                   </ul>
