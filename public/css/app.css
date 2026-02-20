@@ -105,59 +105,6 @@ a:hover {
   outline: 0
 }
 
-.accordion {
-  padding: 19px 22.5px 42px 22.5px;
-}
-
-.accordion-list {
-  color: #fff;
-  font-size: 16px;
-  font-weight: bold;
-  position: relative;
-  /*text-align: right; */
-}
-
-.accordion-contents {
-  padding: 10px 20px;
-}
-
-.accordion-text {
-  padding: 24px 50px 24px 24px;
-  position: relative;
-}
-
-.accordion-box {
-  color: #000000;
-  line-height: 1.5;
-  position: absolute;
-    right: 0;
-    bottom: o;
-}
-
-/* 矢印 */
-.accordion-title {
-  position: relative;
-  text-align: center;
-}
-
-.accordion-title::after {
-  border-right: solid 2px #fff;
-  border-top: solid 2px #fff;
-  content: "";
-  display: block;
-  height: 8px;
-  position: absolute;
-  right: 25px;
-  top: 38%;
-  transform: rotate(135deg);
-  transition: transform .3s ease-in-out, top .3s ease-in-out;
-  width: 8px;
-}
-
-.accordion-title.open::after {
-  top: 45%;
-  transform: rotate(-45deg);
-}
 
 b,
 optgroup,

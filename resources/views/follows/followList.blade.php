@@ -5,21 +5,18 @@
   <h1>フォローリスト</h1>
 </div>
 
-<!-- foreach($followings as $following)
- <p>{ $following->username }</p>
- <p>{ $following->post }</p>
-endforeach -->
-
-@foreach($followed_id as $followed_id)
- <img src="{{ asset('images/icon1.png, icon2.png') }}" alt="">
-@endforeach
+ @foreach($followings as $following)
+ <p>{{ $following->icon_image }}</p>
+ <p>{{ $following->username}}</p>
+ <img src="images/icon1.png">
+ @endforeach
 
 @foreach($followings_post as $following_post)
-<tr>
- <td>{{ $following_post->user->username }}</td>
+<div>
+ <div>{{ $following_post->user->username }}</div>
  <td>{{ $following_post->post }}</td>
  <td>{{ $following_post->created_at }}</td>
-</tr>
+</div>
 @endforeach
 
 </x-login-layout>

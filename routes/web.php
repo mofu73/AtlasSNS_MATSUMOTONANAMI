@@ -48,7 +48,7 @@ require __DIR__ . '/auth.php';
  Route::get('/post/{id}/delete', [PostsController::class, 'delete']);
 
  Route::get('/follow-list', [FollowsController::class, 'follow']);
- Route::get('/follower-list', [FollowsController::class, 'unfollow']);
+ Route::get('/follower-list', [FollowsController::class, 'followed']);
 
  //フォローリスト表示
  Route::post('/search.blade/{id}/follow', [FollowsController::class, 'follows']);
