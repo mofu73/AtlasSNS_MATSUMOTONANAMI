@@ -1,7 +1,7 @@
         <div id="head">
             <div><a href="/top"><img src="images/atlas.png"></a></div>
             <p class="side_user">
-               {{Auth::user()->username }}さん
+               {{ Auth::user()->username }}さん
             </p>
             <!--アコーディオンメニュー -->
             <a><img src="images/icon1.png"></a>

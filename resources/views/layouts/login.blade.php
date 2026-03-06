@@ -37,15 +37,19 @@
       <div id="confirm">
         <p>{{Auth::user()->username}}さん</p>
         <div>
+       <form action="/follow-list" method="get">
           <p>フォロー数</p>
           <p>{{ auth()->user()->follows()->count() }}名</p>
         </div>
-        <p class="btn"><a href="follow-list">フォローリスト</a></p>
+        <input type="submit" class="follow-list" name="follow-list" value="フォロワーリスト">
+       </form>
+       <form action="/follower-list" method="get">
         <div>
           <p>フォロワー数</p>
           <p>{{ auth()->user()->followUsers()->count() }}名</p>
         </div>
-        <p class="btn"><a href="follower-list">フォロワーリスト</a></p>
+        <input type="submit" class="follower-list" name="follower-list" value="フォロワーリスト">
+       </form>
       </div>
       <p class="btn"><a href="search">ユーザー検索</a></p>
     </div>

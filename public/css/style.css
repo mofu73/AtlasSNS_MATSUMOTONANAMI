@@ -12,6 +12,17 @@ body{
     padding-left: 65%;
     padding-top: 40px;
 }
+.follow-list {
+    background-color: #186AC9;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.follower-list {
+    background-color: #186AC9;
+    border-radius: 10px;
+    color: #fff;
+}
 /* header */
 header{
     background:#186AC9;
@@ -32,6 +43,13 @@ header{
     /* 高さは自動調整（アスペクト比維持） */
 }
 
+input.post.png {
+    text-align: right;
+}
+
+input.form-control {
+    width: 750px;
+}
 .container {
     border-style: solid;
 }
@@ -122,4 +140,43 @@ header{
     font-weight: bold;
     border: solid 2px;
     z-index: 2;
+}
+
+/*プロフィール　*/
+#contact {
+    text-align: center;
+    padding: 20px;
+    margin: 30px;
+}
+
+.name-block {
+    padding-bottom: 20px;
+    display: inline-block;
+}
+
+.mail-block {
+    padding-bottom: 20px;
+}
+
+.password-block {
+    padding-bottom: 20px;
+}
+
+.password_confirmation-block {
+    padding-bottom: 20px;
+}
+
+.bio-block {
+    padding-bottom: 20px;
+}
+
+.images-block {
+    padding-bottom: 20px;
+}
+
+input.update {
+    background-color: red;
+    color: #fff;
+    width: 150px;
+    border-radius: 10px;
 }
