@@ -11,18 +11,20 @@ use Illuminate\support\Facades\Auth;
 
 class FollowsController extends Controller
 {
+    //フォローしてる人
     public function follow(){
         $following_id = Auth::user()->follows()->pluck('followed_id');
         $followings = User::WhereIn('id', $following_id)->get();
         $followings_post = Post::query()->WhereIn('user_id', Auth::user()->follows()->pluck('followed_id'))->latest()->get();
-        return view ('follows.followList', ['followings'=>$followings, 'followings_post'=>$followings_post]); //フォローしてる人
+        return view ('follows.followList', ['followings'=>$followings, 'followings_post'=>$followings_post]);
     }
 
+    //フォローしてくれてる人
     public function followed(){
             $followed_id = Auth::user()->followUsers()->pluck('following_id');
             $followed = User::WhereIn('id', $followed_id)->get();
             $followed_post = Post::query()->WhereIn('user_id', Auth::user()->followUsers()->pluck('following_id'))->latest()->get();
-        return view ('follows.followerList', ['followed'=>$followed, 'followed_post'=>$followed_post]); //フォローしてくれてる人
+        return view ('follows.followerList', ['followed'=>$followed, 'followed_post'=>$followed_post]);
     }
 
     //フォロー

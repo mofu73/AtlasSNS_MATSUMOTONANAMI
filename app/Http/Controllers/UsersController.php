@@ -26,4 +26,12 @@ class UsersController extends Controller
     public function index(){
         return view('users/search');
     }
+
+    public function show(User $user){
+    $followingCount = $user->following()->count();
+    $followedCount = $user->followed()->count();
+
+    return view('users.show', compact('user', 'followingCount', 'followedCount'));
+    }
+
 }

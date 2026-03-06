@@ -25,11 +25,21 @@ header{
 #container{
     flex: 0 0 80%;
 }
+.table-hover img {
+    width: 60px;
+    /* 幅を固定 */
+    height: auto;
+    /* 高さは自動調整（アスペクト比維持） */
+}
+
+.container {
+    border-style: solid;
+}
 #side-bar{
     flex: 0 0 19%;
     border-left: 1px solid #727272;
     right: 0;
-        width: 20%;
+    width: 20%;
 }
 
 /* アコーディオンメニュー */

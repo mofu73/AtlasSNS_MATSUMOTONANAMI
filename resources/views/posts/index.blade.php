@@ -29,6 +29,7 @@
    </td>
 </tr>
 </table>
+@csrf
 @endforeach
 <!-- モーダルの中 -->
 

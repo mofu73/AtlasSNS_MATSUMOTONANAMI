@@ -4,6 +4,7 @@
                {{Auth::user()->username }}さん
             </p>
             <!--アコーディオンメニュー -->
+            <a><img src="images/icon1.png"></a>
             <div class="accordion">
                <div class="accordion-contents">
                 <dl class="accordion-list">

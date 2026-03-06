@@ -38,6 +38,9 @@ require __DIR__ . '/auth.php';
   //プロフィール表示
  Route::get('/profile', [ProfileController::class, 'profile']);
 
+ //プロフィール更新
+ Route::post('/profile', [ProfileController::class, 'update']);
+
  //ユーザー検索
  Route::get('/search', [UsersController::class, 'search']);
 
