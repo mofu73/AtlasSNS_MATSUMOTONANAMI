@@ -36,7 +36,10 @@ require __DIR__ . '/auth.php';
  Route::post('/create', [PostsController::class, 'create']);
 
   //プロフィール表示
- Route::get('/profile', [ProfileController::class, 'profile']);
+ Route::get('/profile', [ProfileController::class, 'edit']);
+
+ //相手のプロフィール表示
+ Route::get('/user/{id}/profile', [ProfileController::class, 'profile']);
 
  //プロフィール更新
  Route::post('/profile', [ProfileController::class, 'update']);

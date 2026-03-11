@@ -8,7 +8,9 @@
  @foreach($followings as $following)
  <p>{{ $following->icon_image }}</p>
  <p>{{ $following->username}}</p>
- <img src="images/icon1.png">
+ <a href="/user/{{$following->id}}/profile">
+   <img src="images/icon1.png">
+ </a>
  @endforeach
 
 @foreach($followings_post as $following_post)

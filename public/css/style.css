@@ -23,6 +23,11 @@ body{
     border-radius: 10px;
     color: #fff;
 }
+.btn.search {
+    background-color: #186AC9;
+    border-radius: 10px;
+    color: #fff;
+}
 /* header */
 header{
     background:#186AC9;
@@ -43,8 +48,9 @@ header{
     /* 高さは自動調整（アスペクト比維持） */
 }
 
-input.post.png {
-    text-align: right;
+.post_image {
+    margin-left: 800px;
+    margin-bottom: 10;
 }
 
 input.form-control {
@@ -60,6 +66,9 @@ input.form-control {
     width: 20%;
 }
 
+input.post.png {
+    text-align: right;
+}
 /* アコーディオンメニュー */
 .accordion-container {
     display: flex;
@@ -179,4 +188,13 @@ input.update {
     color: #fff;
     width: 150px;
     border-radius: 10px;
+}
+
+/* ユーザー名 */
+input .form {
+    width: 300px;
+}
+
+.images.search.png {
+    text-align: right;
 }

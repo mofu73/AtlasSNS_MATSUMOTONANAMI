@@ -41,7 +41,7 @@
           <p>フォロー数</p>
           <p>{{ auth()->user()->follows()->count() }}名</p>
         </div>
-        <input type="submit" class="follow-list" name="follow-list" value="フォロワーリスト">
+        <input type="submit" class="follow-list" name="follow-list" value="フォローリスト">
        </form>
        <form action="/follower-list" method="get">
         <div>

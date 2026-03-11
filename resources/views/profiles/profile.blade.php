@@ -9,7 +9,7 @@
         </div>
     @endif
     <section id="contact">
-     <form action="/profile" method="post">
+     <form action="/profile" enctype="multipart/form-data" method="post">
       <div class="name-block">
           <label class="contact-text" for="name">ユーザー名</label>
           <input id="name" class="name" type="name" name="username" value="{{ Auth::user()->username }}">
@@ -17,7 +17,7 @@
 
       <div class="mail-block">
           <label class="contact-text" for="mail">メールアドレス</label>
-          <input id="mail" class="mail" type="mail" name="mail" value="{{ Auth::user()->email }}">
+          <input id="mail" class="mail" type="mail" name="email" value="{{ Auth::user()->email }}">
       </div>
 
       <div class="password-block">
@@ -37,7 +37,7 @@
 
       <div class="images-block">
           <label class="contact-text" for="images">アイコン画像</label>
-          <input id="images" class="images" type="images" name="images" value="">
+          <input id="images" class="images" type="file" name="images" value="">
       </div>
         <input type="submit" class="update" name="update" value="更新">
         @csrf
