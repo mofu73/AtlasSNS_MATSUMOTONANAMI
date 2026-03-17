@@ -30,11 +30,11 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request)
     {
-        $validated = $request->validate([
-        'username' => 'required', 'string', 'alpha_num:ascii', 'between:2,12',
-        'email' => 'required', 'between:5,40', 'unique:users', 'email',
-        'password' => 'required', 'alpha_num', 'between:8,20', 'confirmed',
-        'password_confirmation' => 'required', 'alpha_num:ascii', 'between:8,20',
+        $request->validate([
+        'username' => 'required|string|alpha_num:ascii|between:2,12',
+        'email' => 'required|between:5,40|unique:users,email|email',
+        'password' => 'required|alpha_num|between:8,20|confirmed',
+        'password_confirmation' => 'required|alpha_num:ascii|between:8,20',
         ]);
 
         User::create([

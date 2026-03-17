@@ -2,7 +2,7 @@
 <div class="">
   <form action="/search" method="get">
     <input type="text" name="keyword" class="form" placeholder="ユーザー名">
-    <input type="image" src="images/search.png" alt="検索">
+    <input type="image" class="search" src="images/search.png" alt="検索">
   </form>
 
   @if(!empty($keyword))

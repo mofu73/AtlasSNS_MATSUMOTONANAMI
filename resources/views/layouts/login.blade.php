@@ -35,7 +35,7 @@
     </div>
     <div class="side-user">
       <div id="confirm">
-        <p>{{Auth::user()->username}}さん</p>
+        <p>{{Auth::user()->username}}さんの</p>
         <div>
        <form action="/follow-list" method="get">
           <p>フォロー数</p>

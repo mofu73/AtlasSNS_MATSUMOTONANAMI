@@ -9,7 +9,7 @@ class UsersController extends Controller
 {
     //
     public function profile(){
-        return view('users.profile');
+        return view('users_profile');
     }
 
     public function search(Request $request){

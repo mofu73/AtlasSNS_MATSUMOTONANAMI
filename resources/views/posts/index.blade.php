@@ -20,12 +20,12 @@
    <!-- 更新　-->
    <div class="content">
    <td><a class="js-modal-open" href="/top/update" post="{{ $post->post }}" post_id="{{ $post->id }}">
-    <img src="images/edit.png" alt="編集">
+    <img src="images/edit.png" class="edit_image" alt="編集">
    </a></td>
 
    <!-- 削除-->
    <td><a class="btn btn danger" href="/post/{{$post->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')">
-    <img class="Trash" src="images/trash.png" alt="削除"></a>
+    <img class="Trash_image" src="images/trash.png" alt="削除"></a>
    </td>
 </tr>
 </table>

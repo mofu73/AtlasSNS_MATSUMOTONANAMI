@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\View\View;
 use App\Models\User;
+use App\Models\Post;
+
 
 
 class ProfileController extends Controller
@@ -46,7 +48,9 @@ class ProfileController extends Controller
  }
 
     public function profile($id){
-        User::where('id', $id)->get();
-        return view('profiles.users_profile');
+        $users = User::where('id', $id)->first();
+        $post = Post::where('user_id', $id)->get();
+        return view('profiles.users_profile', ['users'=>$users, 'post'=>$post]);
     }
+
 }

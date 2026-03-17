@@ -4,7 +4,7 @@
  <p>{{ $followed->icon_image }}</p>
  <p>{{ $followed->username}}</p>
  <a href="/user/{{$followed->id}}/profile">
-   <img src="images/icon1.png">
+   <img src="images/icon2.png">
  </a>
  @endforeach
 
