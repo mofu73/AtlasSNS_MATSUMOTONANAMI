@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Hash;
 use Illuminate\View\View;
 use App\Models\User;
 use App\Models\Post;
+use App\Models\Follow;
 
 
 
@@ -49,8 +50,47 @@ class ProfileController extends Controller
 
     public function profile($id){
         $users = User::where('id', $id)->first();
-        $post = Post::where('user_id', $id)->get();
-        return view('profiles.users_profile', ['users'=>$users, 'post'=>$post]);
+        $post = Post::where('user_id', $id)->get()->sortByDesc('created_at');
+        return view('profiles.users_profile', ['users'=>$users, 'post'=>$post ]);
     }
 
+    //フォローしてる人
+    public function follow(){
+        $following_id = Auth::user()->follows()->pluck('followed_id');
+        $followings = User::WhereIn('id', $following_id)->get();
+        $followings_post = Post::query()->WhereIn('user_id', Auth::user()->follows()->pluck('followed_id'))->latest()->get();
+        return view ('profiles.users_profile', ['followings'=>$followings, 'followings_post'=>$followings_post]);
+    }
+
+    //フォローしてくれてる人
+    public function followed(){
+            $followed_id = Auth::user()->followUsers()->pluck('following_id');
+            $followed = User::WhereIn('id', $followed_id)->get();
+            $followed_post = Post::query()->WhereIn('user_id', Auth::user()->followUsers()->pluck('following_id'))->latest()->get();
+        return view ('profiles.users_profile', ['followed'=>$followed, 'followed_post'=>$followed_post]);
+    }
+
+    //フォロー
+    public function follows($id){
+        $follower = auth()->user();
+        $is_following = $follower->isFollowing($id);
+        if(!$is_following) {
+            $follower->follow($id);
+            return back();
+        }
+    }
+
+    public function unfollow(){
+        return view('profiles.users_profile');
+    }
+
+    //フォロー解除
+    public function unfollows($id) {
+        $follower = auth()->user();
+        $is_following = $follower->isFollowing($id);
+        if($is_following) {
+            $follower->unfollow($id);
+            return back();
+        }
+    }
 }

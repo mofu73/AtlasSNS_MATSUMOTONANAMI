@@ -1,18 +1,39 @@
 <x-login-layout>
 
- <div class="container">
-    <p>ユーザー名 {{ $users->username }} </p>
-    <img src="{{ asset('images/icon2.png') }}" value="アイコン">
-    <p>自己紹介 {{ $users->bio }}</p>
+<div class="users_container">
+    <img src="{{ asset('images/icon2.png') }}" class="icon2_image" value="アイコン">
+    <div>ユーザー名 {{ $users->username }} </div>
+    <td>自己紹介 {{ $users->bio }}</td>
 </div>
 
-@foreach($followings_post as $following_post)
 <div>
- <div>{{ $following_post->user->username }}</div>
- <td>{{ $following_post->post }}</td>
- <td>{{ $following_post->created_at }}</td>
+ @if(!auth()->user()->isFollowing($query->id))
+   <form action="/users_profile.blade/{{ $query->id }}/follow" method="post">
+     @csrf
+   <button type="submit" class="btn btn-info pull-right">フォローする</button>
+  </form>
+  @else
+  <form action="/users_profile.blade/{{ $query->id }}/unfollow" method="post">
+     @csrf
+   <button type="submit" class="btn btn-danger pull-right">フォロー解除</button>
+  </form>
+ @endif
 </div>
-@endforeach
-@csrf
 
+@foreach($post as $post)
+<div class="profile">
+ <tr>
+  <div>
+   <a><img src="{{ asset('images/icon2.png') }}" class="icon2_image" value="アイコン"></a>
+  </div>
+
+ <div class="profile-info">
+  <h4>{{ $post->user->username }}</h4>
+  <p>{{ $post->post }}</p>
+  <td>{{ $post->created_at->format('Y/m/d H:i:s') }}</td>
+   @csrf
+ </div>
+</div>
+</tr>
+@endforeach
 </x-login-layout>

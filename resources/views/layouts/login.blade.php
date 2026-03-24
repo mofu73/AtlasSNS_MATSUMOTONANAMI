@@ -51,7 +51,10 @@
         <input type="submit" class="follower-list" name="follower-list" value="フォロワーリスト">
        </form>
       </div>
-      <p class="btn"><a href="search">ユーザー検索</a></p>
+      <form action="/search">
+       <input type="submit" class="search" value="ユーザー検索">
+      </form>
+
     </div>
   </div>
   <footer>

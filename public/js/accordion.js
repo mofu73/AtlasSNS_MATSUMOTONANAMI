@@ -8,3 +8,17 @@ $(function () {
     $(".js-accordion-title").not(this).removeClass('open');
   });
 });
+
+$(function () {
+  // タイトルをクリックすると
+  $(".js-modal-open").on("click", function () {
+    // タイトルにopenクラスを付け外しして矢印の向きを変更
+    $('#modal_open').fadeIn();
+    $(".js-modal_open").not(this).removeClass('open');
+    var post = $(this).attr('post');
+    var post_id = $(this).attr('post_id');
+
+    $('.form-control').val(post);
+    $('').val(post_id);
+  });
+});

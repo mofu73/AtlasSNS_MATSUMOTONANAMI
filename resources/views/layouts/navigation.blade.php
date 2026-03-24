@@ -1,10 +1,10 @@
         <div id="head">
-            <div><a href="/top"><img src="images/atlas.png" class="atlas_image"></a></div>
+            <div><a href="/top"><img src="{{ asset('images/atlas.png') }}" class="atlas" value="アイコン"></a></div>
             <p class="side_user">
                {{ Auth::user()->username }}さん
+               <img src="{{ asset('images/icon1.png') }}" class="icon1" value="アイコン">
             </p>
             <!--アコーディオンメニュー -->
-            <a><img src="images/icon1.png" class="user-icon"></a>
             <div class="accordion">
                <div class="accordion-contents">
                 <dl class="accordion-list">
@@ -20,4 +20,5 @@
                  </dd>
                 </dl>
                </div>
+
             </div>

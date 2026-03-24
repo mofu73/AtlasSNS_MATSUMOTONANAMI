@@ -62,5 +62,7 @@ require __DIR__ . '/auth.php';
  //フォロー解除
   Route::post('/search.blade/{id}/unfollow', [FollowsController::class, 'unfollows']);
 
+  Route::post('/user/{id}/profile/unfollow', [FollowsController::class, 'unfollows']);
+
  //  ログアウト
  Route::get('/logout', [LoginController::class, 'logout']);

@@ -6,6 +6,7 @@
       {{ Form::input('text', 'newPost', null,['required', 'class' => 'form-control', 'placeholder' => '投稿内容を入力してください。'])}}
       <input type="image" class="post_image" src="/images/post.png" value="投稿" >
   </div>
+<!-- <div style="border-bottom: 3px solid #888;"/ class="border"> -->
 
   {!! Form::close() !!}
 </div>
@@ -19,9 +20,9 @@
 
    <!-- 更新　-->
    <div class="content">
-   <td><a class="js-modal-open" href="/top/update" post="{{ $post->post }}" post_id="{{ $post->id }}">
+   <td><button type="button" class="js-modal-open"  post="{{ $post->post }}" post_id="{{ $post->id }}">
     <img src="images/edit.png" class="edit_image" alt="編集">
-   </a></td>
+   </button></td>
 
    <!-- 削除-->
    <td><a class="btn btn danger" href="/post/{{$post->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')">
@@ -32,5 +33,22 @@
 @csrf
 @endforeach
 <!-- モーダルの中 -->
+<!-- include('components.modal_window')
+section('modal_window') -->
+    <div id="modal_open">
+      <div class="modal_BG">
+      </div>
+      <div id="modal_main">
+          {!! Form::open(['url' => '/upcreate']) !!}
+          {{ Form::input('text', 'newPost', null,['required', 'class' => 'form-control', 'placeholder' => '投稿内容を入力してください。'])}}
+          {!! Form::close() !!}
+          <input type="image" class="edit_image" src="/images/edit.png" value="投稿" >
+        </div>
+        <footer id="modal_footer">
+            <p><a id="modal-close" class="button-link">閉じる</a></p>
+        </footer>
+    </div>
+<!--endsection
+yield('modal_window')-->
 
 </x-login-layout>
