@@ -6,19 +6,18 @@
     <td>自己紹介 {{ $users->bio }}</td>
 </div>
 
-<div>
- @if(!auth()->user()->isFollowing($query->id))
-   <form action="/users_profile.blade/{{ $query->id }}/follow" method="post">
-     @csrf
-   <button type="submit" class="btn btn-info pull-right">フォローする</button>
-  </form>
-  @else
-  <form action="/users_profile.blade/{{ $query->id }}/unfollow" method="post">
-     @csrf
-   <button type="submit" class="btn btn-danger pull-right">フォロー解除</button>
-  </form>
- @endif
-</div>
+@if(!auth()->user()->isFollowing($users->id))
+  <form action="/users_profile.blade/{{ $users->id }}/follow" method="post">
+    @csrf
+  <button type="submit" class="btn btn-info pull-right">フォローする</button>
+</form>
+@else
+<form action="/users_profile.blade/{{ $users->id }}/unfollow" method="post">
+    @csrf
+  <button type="submit" class="btn btn-danger pull-right">フォロー解除</button>
+</form>
+  @endif
+
 
 @foreach($post as $post)
 <div class="profile">
@@ -28,8 +27,8 @@
   </div>
 
  <div class="profile-info">
-  <h4>{{ $post->user->username }}</h4>
-  <p>{{ $post->post }}</p>
+  <td>{{ $post->user->username }}</td>
+  <td>{{ $post->post }}</>
   <td>{{ $post->created_at->format('Y/m/d H:i:s') }}</td>
    @csrf
  </div>

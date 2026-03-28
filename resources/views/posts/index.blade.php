@@ -1,5 +1,5 @@
 <x-login-layout>
-<div id="container">
+<div id="container_post">
     {!! Form::open(['url' => '/create']) !!}
     <a><img src="images/icon1.png"></a>
   <div class="form-group">
@@ -39,10 +39,13 @@ section('modal_window') -->
       <div class="modal_BG">
       </div>
       <div id="modal_main">
-          {!! Form::open(['url' => '/upcreate']) !!}
-          {{ Form::input('text', 'newPost', null,['required', 'class' => 'form-control', 'placeholder' => '投稿内容を入力してください。'])}}
+          {!! Form::open(['url' => '/top/update']) !!}
+          {{ Form::input('text', 'upPost', null,['required', 'class' => 'form-control', 'placeholder' => '投稿内容を入力してください。'])}}
+          {{ Form::input('hidden', 'up_id', null,['class' => 'up_id'])}}
           {!! Form::close() !!}
-          <input type="image" class="edit_image" src="/images/edit.png" value="投稿" >
+          @csrf
+          @method('PUT')
+          <input type="image" class="edit_image" src="/images/edit.png" value="更新" >
         </div>
         <footer id="modal_footer">
             <p><a id="modal-close" class="button-link">閉じる</a></p>

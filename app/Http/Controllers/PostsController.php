@@ -14,8 +14,9 @@ class PostsController extends Controller
     public function index(){
         $user = Auth::user();//ログインしてるユーザー情報取得
         $post = Post::get();
+        $following_id = Auth::user()->follows()->pluck('followed_id');
+        $post = Post::with('user')->whereIn('user_id', $user)->orWhereIn('user_id', $following_id)->get();//フォローしているユーザーidの投稿内容を取得
         return view('posts.index',['posts'=>$post]);
-        $post = Post::with('user')->whereIn('user_id', $user)->orwhere('user_id', $following_id)->get();//フォローしているユーザーidの投稿内容を取得
     }
 
     //登録処理
@@ -34,9 +35,10 @@ class PostsController extends Controller
     }
 
     public function update(Request $request){
-        $id = $request->input('id');
+        $id = $request->input('up_id');
         $up_post = $request->input('upPost');
         $user_id = Auth::id();
+
         //dd($up_post);
 
         Post::where('id', $id)->update

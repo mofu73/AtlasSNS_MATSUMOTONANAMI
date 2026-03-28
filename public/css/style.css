@@ -17,16 +17,16 @@ body{
     padding-left: 60%;
     padding-top: 40px;
 }
-#confirm {
-    border-left: 2px solid #333;
-}
+
 .follow-list {
     background-color: #186AC9;
     border-radius: 10px;
     color: #fff;
+    margin-left: 70px;
 }
 
 .follower-list {
+    margin-left: 70px;
     background-color: #186AC9;
     border-radius: 10px;
     color: #fff;
@@ -35,6 +35,7 @@ body{
     background-color: #186AC9;
     border-radius: 10px;
     color: #fff;
+        margin-left: 80px;
 }
 /* header */
 header{
@@ -47,6 +48,7 @@ header{
     flex-flow: row wrap;
 }
 #container{
+    border-right: 1px solid #000;
     flex: 0 0 80%;
 }
 .table-hover img {
@@ -219,7 +221,7 @@ input.update {
 }
 
 .form {
-    width: 500px;
+    width: 400px;
     margin-left: 40px;
 }
 /* ユーザー名 */

@@ -48,7 +48,8 @@ require __DIR__ . '/auth.php';
  Route::get('/search', [UsersController::class, 'search']);
 
  //編集処理
- Route::get('/top/update', [PostsController::class, 'update']);
+ Route::post('/top/update', [PostsController::class, 'update']);
+
 
  //削除処理
  Route::get('/post/{id}/delete', [PostsController::class, 'delete']);
