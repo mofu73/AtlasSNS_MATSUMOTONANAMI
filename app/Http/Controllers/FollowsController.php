@@ -12,11 +12,12 @@ use Illuminate\support\Facades\Auth;
 class FollowsController extends Controller
 {
     //フォローしてる人
-    public function follow(){
+    public function follow(Request $request){
         $following_id = Auth::user()->follows()->pluck('followed_id');
         $followings = User::WhereIn('id', $following_id)->get();
         $followings_post = Post::query()->WhereIn('user_id', Auth::user()->follows()->pluck('followed_id'))->latest()->get();
-        return view ('follows.followList', ['followings'=>$followings, 'followings_post'=>$followings_post]);
+        $isActive = $request->input('images');
+        return view ('follows.followList', ['followings'=>$followings, 'followings_post'=>$followings_post, 'isActive'=>$isActive]);
     }
 
     //フォローしてくれてる人

@@ -10,7 +10,7 @@
                 <dl class="accordion-list">
                    <span class="accordion-title js-accordion-title"></span>
                    <dd class="accordion-text">
-                      <div class="accordion-box">
+                   <div class="accordion-box">
                   <ul>
                      <li><a class="home" href="/top">HOME</a></li>
                      <li><a class="profile" href="/profile">プロフィール編集</a></li>
