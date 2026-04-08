@@ -7,6 +7,11 @@ body{
     display: flex;
 }
 
+/* ログイン画面 */
+#clear {
+    color: white;
+    background: linear-gradient(skyblue, orange);
+}
 .atlas {
     width: 150px;
     margin-top: 30px;
@@ -29,6 +34,7 @@ body{
 .following_posting {
     display: flex;
 }
+
 .follower-list {
     margin-left: 100px;
     background-color: #186AC9;
@@ -63,16 +69,27 @@ header{
 }
 
 .edit_image {
-    margin-left: 65%;
+    margin-left: 70%;
     margin-top: 5%;
 }
-.post_image {
+input.post_image {
+    margin-left: 1000px;
     width: 48px;
-        height: 48px;
-        margin-left: 900px;
+    height: 48px;
+}
+
+.Trash_image:hover {
+    background: red;
+    color: #fff;
+    transition: 0.3s;
+}
+
+.icon1.png {
+    text-align: right;
 }
 
 input.form-control {
+    border: none;
     width: 750px;
 }
 .container {
@@ -121,6 +138,7 @@ input.post.png {
 .accordion-text {
     padding: 24px 25px 24px 24px;
     position: relative;
+    display: none;
 }
 
 .accordion-box {
@@ -222,8 +240,8 @@ input.update {
 .search_image {
     width: 50px;
     height: 50px;
-    margin-left: 35px;
-    margin-top: 10px;
+    margin-left: 15px;
+        margin-top: 15px;
 }
 
 .search_name {
@@ -233,6 +251,8 @@ input.update {
 .form {
     width: 300px;
     margin-left: 40px;
+    padding: 10px;
+        border-radius: 5px;
 }
 
 /* ユーザー名 */

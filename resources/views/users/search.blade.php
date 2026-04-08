@@ -4,6 +4,7 @@
     <input type="text" name="keyword" class="form" placeholder="ユーザー名">
     <input type="image" class="search_image" src="images/search.png" alt="検索">
   </form>
+  <hr style="border: 0; border-top: 7px solid #ccc;">
 
   @if(!empty($keyword))
   <h3>検索ワード:{{$keyword}}</h3>

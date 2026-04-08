@@ -6,6 +6,7 @@
       {{ Form::input('text', 'newPost', null,['required', 'class' => 'form-control', 'placeholder' => '投稿内容を入力してください。'])}}
       <input type="image" class="post_image" src="/images/post.png" value="投稿" >
   </div>
+  <hr style="border: 0; border-top: 7px solid #ccc;">
 <!-- <div style="border-bottom: 3px solid #888;"/ class="border"> -->
 
   {!! Form::close() !!}
