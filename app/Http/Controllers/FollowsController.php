@@ -16,8 +16,8 @@ class FollowsController extends Controller
         $following_id = Auth::user()->follows()->pluck('followed_id');
         $followings = User::WhereIn('id', $following_id)->get();
         $followings_post = Post::query()->WhereIn('user_id', Auth::user()->follows()->pluck('followed_id'))->latest()->get();
-        $isActive = $request->input('images');
-        return view ('follows.followList', ['followings'=>$followings, 'followings_post'=>$followings_post, 'isActive'=>$isActive]);
+        $icon = $request->file('public/images');
+        return view ('follows.followList', ['followings'=>$followings, 'followings_post'=>$followings_post, 'icon'=>$icon]);
     }
 
     //フォローしてくれてる人

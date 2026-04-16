@@ -14,7 +14,7 @@
 @foreach ($posts as $post)
 <table class="table table-hover">
 <tr>
-     <a><img src="images/icon1.png"></a>
+     <a><img src="images/icon1.png" class="post_icon"></a>
      <td>{{ $post->user->username }}</td>
      <td>{{ $post->post }}</td>
      <td>{{ $post->created_at }}</td>
