@@ -14,11 +14,10 @@
 
 <div class="search_name">
   @foreach ($query as $query)
+  <div class="flex">
   @if($query->id !== Auth::user()->id)
   <a><img src="images/icon2.png"></a>
-  <p value="{{ $query}}" class="name_search">
-   {{ $query->username}}
-  </p>
+  <p class="search_username">{{ $query->username}}</p>
   @if(!auth()->user()->isFollowing($query->id))
   <form action="/search.blade/{{ $query->id }}/follow" method="post">
     @csrf
@@ -31,6 +30,7 @@
  </form>
   @endif
   @endif
-  @endforeach
+</div>
+@endforeach
 </div>
 </x-login-layout>

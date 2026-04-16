@@ -30,7 +30,8 @@ html{
     margin-left: 100px;
     }
 
-.following_posting {
+.following_posting #text {
+    letter-spacing: 0.1em;
 }
 
 .follower-list {
@@ -256,18 +257,27 @@ h3 {
         margin-top: 15px;
 }
 
-.search_name {
-    width: 50%;
-        height: 40%;
-        margin: 0 auto;
-        }
+.flex {
+    display: flex;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 1%;
+    align-items: center;
+    justify-content: space-evenly;
+}
 
+.search_username {
+    width: 40%;
+    margin-left: 30px;
+    flex-wrap: nowrap;
+}
 .form {
     width: 300px;
     margin-left: 45px;
     padding: 10px;
         border-radius: 5px;
 }
+
 
 /* ユーザー名 */
 input .form {
@@ -279,7 +289,7 @@ input .form {
 }
 
 .name_search {
-    margin-left: 20px;
+    margin-left: 50px;
 }
 /* 相手ユーザーのプロフィール */
 .users_container {
