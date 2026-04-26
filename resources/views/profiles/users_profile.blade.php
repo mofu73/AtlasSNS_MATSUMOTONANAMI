@@ -3,9 +3,10 @@
 <div class="users_container">
     <img src="{{ asset('images/icon2.png') }}" class="icon2_image" value="アイコン">
     <div>ユーザー名 {{ $users->username }} </div>
-    <td>自己紹介 {{ $users->bio }}</td>
+    <div>自己紹介 {{ $users->bio }}</div>
 </div>
 
+<div class="users_btn">
 @if(!auth()->user()->isFollowing($users->id))
   <form action="/users_profile.blade/{{ $users->id }}/follow" method="post">
     @csrf
@@ -16,10 +17,11 @@
     @csrf
   <button type="submit" class="btn btn-danger pull-right">フォロー解除</button>
 </form>
-  @endif
-
+@endif
+</div>
 
 @foreach($post as $post)
+<hr style="border: 0; border-top: 7px solid #ccc;">
 <div class="profile">
  <tr>
   <div>
@@ -28,8 +30,8 @@
 
  <div class="profile-info">
   <td>{{ $post->user->username }}</td>
-  <td>{{ $post->post }}</>
-  <td>{{ $post->created_at->format('Y/m/d H:i:s') }}</td>
+  <td class="post_info">{{ $post->post }}</>
+  <td class="date_info">{{ $post->created_at->format('Y/m/d H:i:s') }}</td>
    @csrf
  </div>
 </div>

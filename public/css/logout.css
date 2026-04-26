@@ -4,9 +4,42 @@ html{
     height: 100%;
 }
 
+#container {
+    display: block;
+}
+
+.login_form input {
+    color: red;
+}
+
+p {
+    color: #fff;
+    font-weight: bold;
+}
 body{
     background: linear-gradient(#0072FF, yellow);
     height: 100%;
     text-align: center;
+    justify-content: center;
         /* background: #186AC9;*/
     }
+
+.atlas_rog {
+    font-size: 18px;
+}
+
+label {
+    color: #fff;
+}
+
+.atlas_ima .register {
+    color: #fff;
+}
+
+.atlas_rog {
+    color: #fff;
+}
+
+a {
+    color: #ffffff;
+}

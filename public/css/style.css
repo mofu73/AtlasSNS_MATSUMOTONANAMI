@@ -16,17 +16,24 @@ html{
     margin-top: 30px;
     margin-left: 25px;
 }
+
 .side_user {
+    display: flex;
     color: #fff;
     padding-left: 60%;
     padding-top: 40px;
 }
 
+#confirm p {
+    margin-left: 20px;
+}
 
 .follow-list {
     background-color: #186AC9;
     border-radius: 10px;
+    border: none;
     color: #fff;
+    padding: 10px;
     margin-left: 100px;
     }
 
@@ -34,18 +41,26 @@ html{
     letter-spacing: 0.1em;
 }
 
+.count_follow {
+    margin-left: 20px;
+
+}
 .follower-list {
     margin-left: 100px;
     background-color: #186AC9;
     border-radius: 10px;
+    padding: 10px;
+        border: none;
     color: #fff;
 }
 .search {
     background-color: #186AC9;
     border-radius: 10px;
+    border: none;
     color: #fff;
-        margin-left: 80px;
-        margin-top: 45px;
+        margin-left: 70px;
+            margin-bottom: 55px;
+            padding: 10px 40px;
 }
 /* header */
 header{
@@ -61,6 +76,7 @@ header{
     border-right: 1px solid #000;
     flex: 0 0 80%;
 }
+
 .table-hover img {
     width: 60px;
     /* 幅を固定 */
@@ -68,8 +84,8 @@ header{
 }
 
 
-.edit_image {
-    margin-left: 70%;
+.js-modal-open {
+    margin-left: 80%;
     margin-top: 5%;
 }
 input.post_image {
@@ -78,13 +94,17 @@ input.post_image {
     height: 48px;
 }
 
+.Trash_image {
+    color: red;
+    cursor: pointer;
+    transition: .0.3s;
+}
 .Trash_image:hover {
     background: red;
     color: #fff;
-    transition: 0.3s;
 }
 
-.icon1.png {
+.post_icon {
     text-align: right;
 }
 
@@ -106,6 +126,7 @@ input.form-control {
     width: 20%;
 }
 
+
 input.post.png {
     text-align: right;
 }
@@ -115,9 +136,8 @@ input.post.png {
     position: relative;
 }
 
-.img_icon1 {
-    width: 30px;
-    height: 30px;
+.icon1 {
+    margin-left: 50%;
 }
 .accordion {
     padding: 30px 22.5px 42px 22.5px;
@@ -295,8 +315,13 @@ input .form {
 .users_container {
     display: block;
     align-items: center;
+    margin-left: 10%;
+        line-height: 1.5;
 }
 
+.bio_user {
+    line-height: 30px;
+}
 .icon2_image {
     width: 55px;
     height: 55px;
@@ -307,9 +332,23 @@ input .form {
 .profile {
     display: flex;
     align-items: center;
+    margin-top: 5%;
     gap: 16px;
 }
 
+.pull-right {
+    float: right;
+}
+
+.btn-danger {
+    color: #ffffff;
+    background-color: #d61010;
+    border-color: #ffffff00;
+}
+
+.profile-info {
+    letter-spacing: 2px;
+}
 .profile-info h4 {
     margin: 0;
     font-size: 20px;
@@ -322,6 +361,7 @@ input .form {
 .profile-info td {
     text-align: right;
 }
+
 
 #modal_open {
     display: none;

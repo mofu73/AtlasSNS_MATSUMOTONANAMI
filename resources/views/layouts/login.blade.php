@@ -39,7 +39,7 @@
         <div>
        <form action="/follow-list" method="get">
           <p>フォロー数</p>
-          <p>{{ auth()->user()->follows()->count() }}名</p>
+          <p class="count_follow">{{ auth()->user()->follows()->count() }}名</p>
         </div>
         <input type="submit" class="follow-list" name="follow-list" value="フォローリスト">
        </form>
@@ -51,6 +51,7 @@
         <input type="submit" class="follower-list" name="follower-list" value="フォロワーリスト">
        </form>
       </div>
+      <hr style="border: 0; border-top: 5px solid #ccc;">
       <form action="/search">
        <input type="submit" class="search" value="ユーザー検索">
       </form>

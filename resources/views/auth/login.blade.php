@@ -3,16 +3,18 @@
   <!-- 適切なURLを入力してください -->
   {!! Form::open(['url' => '/login']) !!}
 
-  <p>AtlasSNSへようこそ</p>
+  <p class="atlas_rog">AtlasSNSへようこそ</p>
 
+  <div class="login_form">
   {{ Form::label('email') }}
   {{ Form::text('email',null,['class' => 'input']) }}
   {{ Form::label('password') }}
   {{ Form::password('password',['class' => 'input']) }}
 
   {{ Form::submit('ログイン') }}
+</div>
 
-  <p><a href="register">新規ユーザーの方はこちら</a></p>
+  <p class=""login_new><a href="register">新規ユーザーの方はこちら</a></p>
 
   {!! Form::close() !!}
 

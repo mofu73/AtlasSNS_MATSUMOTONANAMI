@@ -1,7 +1,7 @@
 <x-login-layout>
 <div id="container_post">
     {!! Form::open(['url' => '/create']) !!}
-    <a><img src="images/icon1.png"></a>
+    <a class="post_icon"><img src="images/icon1.png"></a>
   <div class="form-group">
       {{ Form::input('text', 'newPost', null,['required', 'class' => 'form-control', 'placeholder' => '投稿内容を入力してください。'])}}
       <input type="image" class="post_image" src="/images/post.png" value="投稿" >
