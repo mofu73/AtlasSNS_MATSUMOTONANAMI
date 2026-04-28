@@ -96,12 +96,13 @@ input.post_image {
 
 .Trash_image {
     color: red;
+    background-color: white;
     cursor: pointer;
     transition: .0.3s;
 }
 .Trash_image:hover {
     background: red;
-    color: #fff;
+    color: white;
 }
 
 .post_icon {
@@ -137,7 +138,7 @@ input.post.png {
 }
 
 .accordion icon1 {
-    margin-left: 50%;
+    margin-left: 60%;
     margin-top: 60%;
 }
 .accordion {
@@ -319,11 +320,14 @@ input .form {
     margin-left: 10%;
     margin-top: 2%;
     line-height: 1.5;
+    border-bottom: 2px solid #000;
 }
 
 .users_btn {
+    margin-top: 5%;
     margin-bottom: 2%;
 }
+
 .bio_user {
     line-height: 30px;
 }

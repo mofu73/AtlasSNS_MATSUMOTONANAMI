@@ -4,21 +4,19 @@
     <img src="{{ asset('images/icon2.png') }}" class="icon2_image" value="アイコン">
     <div>ユーザー名 {{ $users->username }} </div>
     <div>自己紹介 {{ $users->bio }}</div>
-</div>
-
-<div class="users_btn">
-@if(!auth()->user()->isFollowing($users->id))
+  <div class="users_btn">
+    @if(!auth()->user()->isFollowing($users->id))
   <form action="/users_profile.blade/{{ $users->id }}/follow" method="post">
     @csrf
   <button type="submit" class="btn btn-info pull-right">フォローする</button>
-</form>
-@else
-<form action="/users_profile.blade/{{ $users->id }}/unfollow" method="post">
+ </form>
+ @else
+  <form action="/users_profile.blade/{{ $users->id }}/unfollow" method="post">
     @csrf
   <button type="submit" class="btn btn-danger pull-right">フォロー解除</button>
 </form>
 @endif
-<hr style="border: 0; border-top: 5px solid #ccc;">
+</div>
 </div>
 
 

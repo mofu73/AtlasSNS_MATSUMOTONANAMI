@@ -45,7 +45,7 @@ class PostsController extends Controller
         (['post' =>$up_post]);
         Post::save($up_post);
 
-        return redirect('/top/update');
+        return redirect('/top');
     }
 
     public function delete($id){

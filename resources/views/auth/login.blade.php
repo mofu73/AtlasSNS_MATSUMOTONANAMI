@@ -6,15 +6,15 @@
   <p class="atlas_rog">AtlasSNSへようこそ</p>
 
   <div class="login_form">
-  {{ Form::label('email') }}
+  {{ Form::label('メールアドレス') }}
   {{ Form::text('email',null,['class' => 'input']) }}
-  {{ Form::label('password') }}
+  {{ Form::label('パスワード') }}
   {{ Form::password('password',['class' => 'input']) }}
 
-  {{ Form::submit('ログイン') }}
+  {{ Form::submit('ログイン',['class' => 'btn btn-danger']) }}
 </div>
 
-  <p class=""login_new><a href="register">新規ユーザーの方はこちら</a></p>
+  <p class="login_new"><a href="register">新規ユーザーの方はこちら</a></p>
 
   {!! Form::close() !!}
 

@@ -36,7 +36,7 @@
 <!-- モーダルの中 -->
 <!-- include('components.modal_window')
 section('modal_window') -->
-  <form action='/top/update' method="POST">
+  <form action='/top' method="post">
     @csrf
     <div id="modal_open">
       <div class="modal_BG">
