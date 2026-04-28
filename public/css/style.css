@@ -21,7 +21,7 @@ html{
     display: flex;
     color: #fff;
     padding-left: 60%;
-    padding-top: 40px;
+    padding-top: 90px;
 }
 
 #confirm p {
@@ -136,8 +136,9 @@ input.post.png {
     position: relative;
 }
 
-.icon1 {
+.accordion icon1 {
     margin-left: 50%;
+    margin-top: 60%;
 }
 .accordion {
     padding: 30px 22.5px 42px 22.5px;
@@ -316,9 +317,13 @@ input .form {
     display: block;
     align-items: center;
     margin-left: 10%;
-        line-height: 1.5;
+    margin-top: 2%;
+    line-height: 1.5;
 }
 
+.users_btn {
+    margin-bottom: 2%;
+}
 .bio_user {
     line-height: 30px;
 }
@@ -333,6 +338,7 @@ input .form {
     display: flex;
     align-items: center;
     margin-top: 5%;
+    margin-left: 10%;
     gap: 16px;
 }
 

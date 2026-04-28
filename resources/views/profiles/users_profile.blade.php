@@ -18,10 +18,11 @@
   <button type="submit" class="btn btn-danger pull-right">フォロー解除</button>
 </form>
 @endif
+<hr style="border: 0; border-top: 5px solid #ccc;">
 </div>
 
+
 @foreach($post as $post)
-<hr style="border: 0; border-top: 7px solid #ccc;">
 <div class="profile">
  <tr>
   <div>

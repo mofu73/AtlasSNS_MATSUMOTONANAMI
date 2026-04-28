@@ -36,6 +36,8 @@
 <!-- モーダルの中 -->
 <!-- include('components.modal_window')
 section('modal_window') -->
+  <form action='/top/update' method="POST">
+    @csrf
     <div id="modal_open">
       <div class="modal_BG">
       </div>
@@ -52,6 +54,7 @@ section('modal_window') -->
             <p><a id="modal-close" class="button-link">閉じる</a></p>
         </footer>
     </div>
+  </form>
 <!--endsection
 yield('modal_window')-->
 

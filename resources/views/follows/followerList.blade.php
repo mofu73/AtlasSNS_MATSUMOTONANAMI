@@ -7,6 +7,7 @@
    <img src="images/icon2.png">
  </a>
  @endforeach
+ <hr style="border: 0; border-top: 7px solid #ccc;">
 
 @foreach($followed_post as $followed_post)
 <div>
