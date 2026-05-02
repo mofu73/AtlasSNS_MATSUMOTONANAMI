@@ -26,6 +26,9 @@ html{
 .login_form {
     display: inline-block;
 }
+.register_form {
+    font-display: inline-block;
+}
 p {
     color: #fff;
     font-weight: bold;
@@ -75,6 +78,5 @@ label,
 }
 
 a {
-    color: #ffffff;
-        padding-bottom: 15%;
+    color: #fff;
 }

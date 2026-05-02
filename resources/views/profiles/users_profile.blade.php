@@ -28,10 +28,10 @@
   </div>
 
  <div class="profile-info">
+  @csrf
   <td>{{ $post->user->username }}</td>
   <td class="post_info">{{ $post->post }}</>
   <td class="date_info">{{ $post->created_at->format('Y/m/d H:i:s') }}</td>
-   @csrf
  </div>
 </div>
 </tr>

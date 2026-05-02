@@ -96,7 +96,7 @@ input.post_image {
 
 .Trash_image {
     color: red;
-    background-color: white;
+    background-color: transparent;
     cursor: pointer;
     transition: .0.3s;
 }
@@ -315,9 +315,8 @@ input .form {
 }
 /* 相手ユーザーのプロフィール */
 .users_container {
-    display: block;
+    display: flex;
     align-items: center;
-    margin-left: 10%;
     margin-top: 2%;
     line-height: 1.5;
     border-bottom: 2px solid #000;

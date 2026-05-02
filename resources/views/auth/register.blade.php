@@ -15,7 +15,7 @@
           </ul>
         </div>
     @endif
-
+<div class="register_form">
 {{ Form::label('ユーザー名') }}
 {{ Form::text('username',null,['class' => 'input']) }}
 
@@ -28,7 +28,8 @@
 {{ Form::label('パスワード確認') }}
 {{ Form::text('password_confirmation',null,['class' => 'input']) }}
 
-{{ Form::submit('登録') }}
+{{ Form::submit('登録',['class' => 'btn btn-danger']) }}
+</div>
 
 <p><a href="/login">ログイン画面へ戻る</a></p>
 

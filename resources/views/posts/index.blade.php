@@ -47,7 +47,6 @@ section('modal_window') -->
           {{ Form::input('hidden', 'up_id', null,['class' => 'up_id'])}}
           {!! Form::close() !!}
           @csrf
-          @method('PUT')
           <input type="image" class="edit_image" src="/images/edit.png" value="更新" >
         </div>
         <footer id="modal_footer">
