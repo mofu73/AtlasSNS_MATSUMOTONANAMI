@@ -23,6 +23,10 @@ html{
     width: 250px;
 }
 
+.input-register {
+    margin-right: 25%;
+    width: 200px;
+}
 .login_form {
     display: inline-block;
 }
@@ -51,11 +55,14 @@ body{
 
 .btn {
     margin-top: 5%;
-    margin-left: 60%;
+    margin-left: 55%;
     width: 45%;
 
 }
 
+.login_back {
+    margin-top: 10%;
+}
 .log {
     margin-top: 10%;
 }
@@ -64,6 +71,9 @@ label {
     text-align: start;
 }
 
+.button.input {
+    width: 200px;
+}
 label,
 .input {
     display: block;

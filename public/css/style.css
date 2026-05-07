@@ -316,10 +316,12 @@ input .form {
 /* 相手ユーザーのプロフィール */
 .users_container {
     display: flex;
-    align-items: center;
     margin-top: 2%;
     line-height: 1.5;
     border-bottom: 2px solid #000;
+    justify-content: space-evenly;
+        flex-direction: row;
+        align-items: center;
 }
 
 .users_btn {
@@ -343,6 +345,7 @@ input .form {
     margin-top: 5%;
     margin-left: 10%;
     gap: 16px;
+    justify-content: flex-start;
 }
 
 .pull-right {

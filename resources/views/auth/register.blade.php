@@ -17,21 +17,21 @@
     @endif
 <div class="register_form">
 {{ Form::label('ユーザー名') }}
-{{ Form::text('username',null,['class' => 'input']) }}
+{{ Form::text('username',null,['class' => 'input-register']) }}
 
 {{ Form::label('メールアドレス') }}
-{{ Form::email('email',null,['class' => 'input']) }}
+{{ Form::email('email',null,['class' => 'input-register']) }}
 
 {{ Form::label('パスワード') }}
-{{ Form::text('password',null,['class' => 'input']) }}
+{{ Form::password('password',null,['class' => 'input-register']) }}
 
 {{ Form::label('パスワード確認') }}
-{{ Form::text('password_confirmation',null,['class' => 'input']) }}
+{{ Form::password('password_confirmation',null,['class' => 'input-register']) }}
 
 {{ Form::submit('登録',['class' => 'btn btn-danger']) }}
 </div>
 
-<p><a href="/login">ログイン画面へ戻る</a></p>
+<p class="login_back"><a href="/login">ログイン画面へ戻る</a></p>
 
 {!! Form::close() !!}
 
