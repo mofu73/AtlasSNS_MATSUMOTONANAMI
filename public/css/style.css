@@ -5,9 +5,14 @@ html{
 }
 #head {
     display: flex;
+    justify-content: space-between;
 }
 
 /* ログイン画面 */
+.head-right {
+    display: flex;
+    align-items: center;
+}
 #clear {
     color: white;
 }
@@ -20,8 +25,6 @@ html{
 .side_user {
     display: flex;
     color: #fff;
-    padding-left: 60%;
-    padding-top: 90px;
 }
 
 #confirm p {
@@ -94,18 +97,21 @@ input.post_image {
     height: 48px;
 }
 
-.Trash_image {
-    color: red;
-    background-color: transparent;
+.Trash {
+    width: 75px;
+    height: 75px;
     cursor: pointer;
-    transition: .0.3s;
+    display: inline-block;
+        background-image: url('/images/trash.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        transition: background-image 0.3s;
 }
-.Trash_image:hover {
-    background: red;
-    color: white;
+.Trash:hover {
+    background-image: url('/images/trash-h.png');
 }
 
-.post_icon {
+.post_icon img {
     text-align: right;
 }
 
@@ -142,7 +148,7 @@ input.post.png {
     margin-top: 60%;
 }
 .accordion {
-    padding: 30px 22.5px 42px 22.5px;
+    /* padding: 30px 22.5px 42px 22.5px; */
 }
 
 .accordion-list {
@@ -163,17 +169,39 @@ input.post.png {
     display: none;
 }
 
+.home {
+    padding-bottom: 15px;
+}
+
+.logout {
+    padding-top: 15px;
+}
+
+.profile {
+    align-items: center;
+    gap: 16px;
+    justify-content: flex-start;
+    padding-top: 10px;
+}
+
+.accordion-box li {
+    text-align: center;
+    align-items: center;
+    height: 50px;
+}
 .accordion-box {
-    color: #000000;
+    background-color: #fff;
     line-height: 1.5;
     position: absolute;
     right: 0;
     bottom: o;
+    width: 20vw;
+        border: 2px solid blue;
 }
 
 /* 矢印 */
 .accordion-title {
-    position: relative;
+    position: absolute;
     text-align: center;
 }
 
@@ -185,7 +213,7 @@ input.post.png {
     height: 8px;
     position: absolute;
     right: 25px;
-    top: 40%;
+    top: 5px;
     transform: rotate(135deg);
     transition: transform .3s ease-in-out, top .3s ease-in-out;
     width: 8px;
@@ -317,7 +345,7 @@ input .form {
 .users_container {
     display: flex;
     margin-top: 2%;
-    line-height: 1.5;
+    letter-spacing: 0.8px;
     border-bottom: 2px solid #000;
     justify-content: space-evenly;
         flex-direction: row;
@@ -337,15 +365,6 @@ input .form {
     height: 55px;
     border-radius: 50%;
     object-fit: cover;
-}
-
-.profile {
-    display: flex;
-    align-items: center;
-    margin-top: 5%;
-    margin-left: 10%;
-    gap: 16px;
-    justify-content: flex-start;
 }
 
 .pull-right {

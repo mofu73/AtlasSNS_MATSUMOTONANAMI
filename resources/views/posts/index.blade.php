@@ -27,7 +27,7 @@
 
    <!-- 削除-->
    <td><a class="btn btn danger" href="/post/{{$post->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')">
-    <img class="Trash_image" src="images/trash.png" alt="削除"></a>
+    <span class="Trash" src="images/trash.png" alt="削除"></span></a>
    </td>
 </tr>
 </table>
