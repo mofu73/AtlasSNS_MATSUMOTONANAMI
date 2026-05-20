@@ -2,8 +2,8 @@
 
 <div class="users_container">
     <img src="{{ asset('images/icon2.png') }}" class="icon2_image" value="アイコン">
-    <div>ユーザー名 {{ $users->username }} </div>
-    <div>自己紹介 {{ $users->bio }}</div>
+    <p class="users-name">ユーザー名 {{ $users->username }} </p>
+    <p class="users-bio">自己紹介 {{ $users->bio }}</p>
   <div class="users_btn">
     @if(!auth()->user()->isFollowing($users->id))
   <form action="/users_profile.blade/{{ $users->id }}/follow" method="post">
