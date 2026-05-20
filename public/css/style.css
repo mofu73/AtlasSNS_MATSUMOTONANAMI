@@ -47,6 +47,7 @@ html{
     color: #fff;
     padding: 10px;
     margin-left: 60%;
+    margin-bottom: 15px;
     }
 
 .following_posting #text {
@@ -59,6 +60,7 @@ html{
 }
 .follower-list {
     margin-left: 60%;
+    margin-bottom: 15px;
     background-color: #186AC9;
     border-radius: 10px;
     padding: 10px;
@@ -92,17 +94,25 @@ header{
 .form-group {
     display: flex;
     align-items: center;
+    margin-left: 40px;
 }
+
 .table-hover img {
     width: 60px;
     /* 幅を固定 */
     height: auto;
 }
 
+.table {
+    border-bottom: 1px solid #000 !important;
+}
+
+.table>tbody>tr>td {
+    border: none;
+}
 
 .js-modal-open {
-    margin-left: 80%;
-    margin-top: 5%;
+    margin-left: 85%;
 }
 input.post_image {
     margin-left: 300px;
@@ -112,9 +122,30 @@ input.post_image {
     height: 48px;
 }
 
+.post-date {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.post-name {
+    width: 70%;
+}
+
+.post-post {
+    margin-left: 10%;
+}
+
+.time {
+    margin-left: 7%;
+}
+
+.icons {
+    text-align: center;
+    margin-left: 5%;
+}
 .Trash {
-    width: 70px;
-        height: 70px;
+    width: 60px;
+        height: 60px;
     cursor: pointer;
     display: inline-block;
         background-image: url('/images/trash.png');
@@ -126,6 +157,24 @@ input.post_image {
     background-image: url('/images/trash-h.png');
 }
 
+.edit_image {
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    display: inline-block;
+    background-image: url('/images/edit.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transition: background-image 0.3s;
+}
+
+.edit_image:hover {
+    background-image: url('/images/edit-h.png');
+}
+
+a:hover {
+    text-decoration: none;
+}
 .post_icon img {
     text-align: right;
 }

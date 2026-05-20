@@ -50,7 +50,6 @@ require __DIR__ . '/auth.php';
  //編集処理
  Route::post('/top/update', [PostsController::class, 'update']);
 
-
  //削除処理
  Route::get('/post/{id}/delete', [PostsController::class, 'delete']);
 

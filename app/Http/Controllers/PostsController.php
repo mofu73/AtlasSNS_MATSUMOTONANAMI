@@ -43,7 +43,6 @@ class PostsController extends Controller
 
         Post::where('id', $id)->update
         (['post' =>$up_post]);
-        Post::save($up_post);
 
         return redirect('/top');
     }

@@ -13,22 +13,24 @@
 </div>
 @foreach ($posts as $post)
 <table class="table table-hover">
+<div class="post-date">
+     <div class="icons"><img src="images/icon1.png" class="post_icon"></div>
+     <p class="post-name">{{ $post->user->username }}</p>
+     <p class="time">{{ $post->created_at }}</p>
+</div>
 <tr>
-     <a><img src="images/icon1.png" class="post_icon"></a>
-     <td>{{ $post->user->username }}</td>
-     <td>{{ $post->post }}</td>
-
+  <td></td>
+     <p class="post-post">{{ $post->post }}</p>
+</tr>
    <!-- 更新　-->
    <div class="content">
-   <td><button type="button" class="js-modal-open"  post="{{ $post->post }}" post_id="{{ $post->id }}">
+   <a href="#" class="js-modal-open"  post="{{ $post->post }}" post_id="{{ $post->id }}">
     <img src="images/edit.png" class="edit_image" alt="編集">
-   </button></td>
+  </a>
 
    <!-- 削除-->
-   <td><a class="btn btn danger" href="/post/{{$post->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')">
+   <a class="btn btn danger" href="/post/{{$post->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')">
     <span class="Trash" src="images/trash.png" alt="削除"></span></a>
-    <td>{{ $post->created_at }}</td>
-   </td>
 </tr>
 </table>
 @csrf
@@ -36,16 +38,14 @@
 <!-- モーダルの中 -->
 <!-- include('components.modal_window')
 section('modal_window') -->
-  <form action='/top' method="post">
+  <form action='/top/update' method="post">
     @csrf
     <div id="modal_open">
       <div class="modal_BG">
       </div>
       <div id="modal_main">
-          {!! Form::open(['url' => '/top/update']) !!}
           {{ Form::input('text', 'upPost', null,['required', 'class' => 'form-control', 'placeholder' => '投稿内容を入力してください。'])}}
           {{ Form::input('hidden', 'up_id', null,['class' => 'up_id'])}}
-          {!! Form::close() !!}
           @csrf
           <input type="image" class="edit_image" src="/images/edit.png" value="更新" >
         </div>
