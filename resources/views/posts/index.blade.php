@@ -1,8 +1,8 @@
 <x-login-layout>
 <div id="container_post">
     {!! Form::open(['url' => '/create']) !!}
-    <a class="post_icon"><img src="images/icon1.png"></a>
   <div class="form-group">
+      <img  class="icon-post" src="images/icon1.png"></a>
       {{ Form::input('text', 'newPost', null,['required', 'class' => 'form-control', 'placeholder' => '投稿内容を入力してください。'])}}
       <input type="image" class="post_image" src="/images/post.png" value="投稿" >
   </div>
@@ -17,7 +17,6 @@
      <a><img src="images/icon1.png" class="post_icon"></a>
      <td>{{ $post->user->username }}</td>
      <td>{{ $post->post }}</td>
-     <td>{{ $post->created_at }}</td>
 
    <!-- 更新　-->
    <div class="content">
@@ -28,6 +27,7 @@
    <!-- 削除-->
    <td><a class="btn btn danger" href="/post/{{$post->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')">
     <span class="Trash" src="images/trash.png" alt="削除"></span></a>
+    <td>{{ $post->created_at }}</td>
    </td>
 </tr>
 </table>

@@ -31,13 +31,22 @@ html{
     margin-left: 20px;
 }
 
+.follows {
+    display: flex;
+    align-items: center;
+}
+
+.followers {
+    display: flex;
+    align-items: center;
+}
 .follow-list {
     background-color: #186AC9;
     border-radius: 10px;
     border: none;
     color: #fff;
     padding: 10px;
-    margin-left: 100px;
+    margin-left: 60%;
     }
 
 .following_posting #text {
@@ -49,7 +58,7 @@ html{
 
 }
 .follower-list {
-    margin-left: 100px;
+    margin-left: 60%;
     background-color: #186AC9;
     border-radius: 10px;
     padding: 10px;
@@ -80,6 +89,10 @@ header{
     flex: 0 0 80%;
 }
 
+.form-group {
+    display: flex;
+    align-items: center;
+}
 .table-hover img {
     width: 60px;
     /* 幅を固定 */
@@ -92,14 +105,16 @@ header{
     margin-top: 5%;
 }
 input.post_image {
-    margin-left: 1000px;
+    margin-left: 300px;
+        margin-right: 80px;
+        margin-top: 75px;
     width: 48px;
     height: 48px;
 }
 
 .Trash {
-    width: 75px;
-    height: 75px;
+    width: 70px;
+        height: 70px;
     cursor: pointer;
     display: inline-block;
         background-image: url('/images/trash.png');
@@ -170,7 +185,7 @@ input.post.png {
 }
 
 .home {
-    padding-bottom: 15px;
+    padding-top: 15px;
 }
 
 .logout {
@@ -195,7 +210,7 @@ input.post.png {
     position: absolute;
     right: 0;
     bottom: o;
-    width: 20vw;
+    width: 18vw;
         border: 2px solid blue;
 }
 
