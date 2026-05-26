@@ -44,10 +44,10 @@ section('modal_window') -->
       <div class="modal_BG">
       </div>
       <div id="modal_main">
-          {{ Form::input('text', 'upPost', null,['required', 'class' => 'form-control', 'placeholder' => '投稿内容を入力してください。'])}}
+          {{ Form::input('text', 'upPost', null,['required', 'class' => 'form-control1', 'placeholder' => '投稿内容を入力してください。'])}}
           {{ Form::input('hidden', 'up_id', null,['class' => 'up_id'])}}
           @csrf
-          <input type="image" class="edit_image" src="/images/edit.png" value="更新" >
+          <input type="image" class="edit_image1" src="/images/edit.png" value="更新" >
         </div>
         <footer id="modal_footer">
             <p><a id="modal-close" class="button-link">閉じる</a></p>

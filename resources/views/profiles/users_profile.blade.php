@@ -21,7 +21,7 @@
 
 
 @foreach($post as $post)
-<div class="profile">
+<div class="profile-users">
  <tr>
   <div>
    <a><img src="{{ asset('images/icon2.png') }}" class="icon2_image" value="アイコン"></a>
@@ -29,11 +29,11 @@
 
  <div class="profile-info">
   @csrf
-  <td>{{ $post->user->username }}</td>
-  <td class="post_info">{{ $post->post }}</>
-  <td class="date_info">{{ $post->created_at->format('Y/m/d H:i:s') }}</td>
+  <p class="users_name">{{ $post->user->username }}</p>
+  <p class="date_time">{{ $post->created_at->format('Y/m/d H:i:s') }}</p>
  </div>
 </div>
+  <p class="post_post">{{ $post->post }}</p>
 </tr>
 @endforeach
 </x-login-layout>
