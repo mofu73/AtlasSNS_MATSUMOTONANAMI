@@ -1,6 +1,6 @@
         <div id="head">
             <div class="atlas"><a href="/top"><img src="{{ asset('images/atlas.png') }}" class="atlas" value="アイコン"></a></div>
-            <p class="side_user">
+            <p class="side-user">
                {{ Auth::user()->username }}さん
             </p>
             <!--アコーディオンメニュー -->

@@ -33,7 +33,7 @@
     <div id="container">
       {{ $slot }}
     </div>
-    <div class="side-user">
+    <div class="side_user">
       <div id="confirm">
         <p>{{Auth::user()->username}}さんの</p>
         <div>
@@ -52,9 +52,11 @@
        </form>
       </div>
       <hr style="border: 0; border-top: 5px solid #ccc;">
-      <form action="/search">
+      <div class="search-button">
+       <form action="/search">
        <input type="submit" class="search" value="ユーザー検索">
-      </form>
+       </form>
+      </div>
 
     </div>
   </div>
