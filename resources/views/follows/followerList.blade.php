@@ -1,5 +1,13 @@
 <x-login-layout>
 
+<div class="">
+   <h1>フォローリスト</h1>
+   @foreach($followed as $followed)
+    <img src="{{ asset('images/'.$followed->icon_image) }}">
+   @endforeach
+</div>
+<hr style="border: 0; border-top: 7px solid #ccc;">
+
  @foreach($followed as $followed)
  <p>{{ $followed->icon_image }}</p>
  <p>{{ $followed->username}}</p>

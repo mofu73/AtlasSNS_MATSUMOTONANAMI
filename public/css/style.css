@@ -80,6 +80,9 @@ html{
             margin-bottom: 55px;
             padding: 10px 40px;
 }
+.search-button {
+    margin-right: 30px;
+}
 /* header */
 header{
     background:#186AC9;
@@ -90,11 +93,13 @@ header{
     display: flex;
     flex-flow: row wrap;
 }
+.post_post {
+    margin-left: 15%;
+}
 #container{
     border-right: 1px solid #000;
-    flex: 100%;
-        max-width: 80%;
-}
+    flex: 1%;
+    }
 
 .form-group {
     display: flex;
@@ -256,7 +261,8 @@ input.post.png {
 
 .profile-users {
     display: flex;
-    margin-left: 5%;
+    margin-left: 10%;
+        margin-top: 3%;
     align-items: center;
 }
 
@@ -431,6 +437,13 @@ input .form {
     margin-bottom: 2%;
 }
 
+.users-bio {
+    display: block;
+}
+
+.date_time {
+    margin-left: 5%;
+}
 .bio_user {
     line-height: 30px;
 }
@@ -481,7 +494,8 @@ input .form {
     position: absolute;
     top: 30%;
     left: 25%;
-    bottom: 8%;
+    border-radius: 10px;
+        bottom: 7%;
         width: 50%
 }
 
@@ -489,8 +503,16 @@ input .form {
     width: 60px;
     height: 60px;
     display: block;
+    margin: auto;
+    }
 
+.form-control1 {
+    width: 90%;
+    height: 50%;
+    margin-left: 5%;
+    margin-top: 5%;
 }
+
 .modal_BG {
     background: rgba(0, 0, 0, 0.8);
     height: 100%;
