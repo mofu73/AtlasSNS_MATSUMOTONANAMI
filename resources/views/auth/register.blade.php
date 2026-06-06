@@ -23,12 +23,12 @@
 {{ Form::email('email',null,['class' => 'input-register']) }}
 
 {{ Form::label('パスワード') }}
-{{ Form::password('password',null,['class' => 'input-register']) }}
+{{ Form::password('password',null,['class' => 'input-password']) }}
 
 {{ Form::label('パスワード確認') }}
-{{ Form::password('password_confirmation',null,['class' => 'input-register']) }}
+{{ Form::password('password_confirmation',null,['class' => 'input-confirmation']) }}
 
-{{ Form::submit('登録',['class' => 'btn btn-danger']) }}
+{{ Form::submit('新規登録',['class' => 'btn btn-danger']) }}
 </div>
 
 <p class="login_back"><a href="/login">ログイン画面に戻る</a></p>

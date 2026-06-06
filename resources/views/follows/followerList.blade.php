@@ -29,7 +29,7 @@
 </div>
 <tr>
    <td></td>
- <p class="post-post">{{ $following_post->post }}</p>
+ <p class="post-post">{{ $followed_post->post }}</p>
 </tr>
 </table>
 @endforeach

@@ -149,6 +149,9 @@ input.post_image {
     margin-left: 7%;
 }
 
+.users_name {
+    margin-left: 5%;
+}
 .icons {
     text-align: center;
     margin-left: 5%;
@@ -359,8 +362,13 @@ input.post.png {
     padding-bottom: 20px;
 }
 
+.images {
+    margin-left: 10%;
+}
 .images-block {
     padding-bottom: 20px;
+    display: flex;
+        margin-left: 40%;
 }
 
 input.update {
