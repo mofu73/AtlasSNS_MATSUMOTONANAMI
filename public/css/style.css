@@ -338,28 +338,38 @@ input.post.png {
     text-align: center;
     padding: 20px;
     margin: 30px;
+    max-width: 100%;
 }
 
 
 .name-block {
     padding-bottom: 20px;
-    display: inline-block;
+    display: flex;
+        justify-content: space-evenly;
 }
 
 .mail-block {
     padding-bottom: 20px;
+    display: flex;
+        justify-content: space-evenly;
 }
 
 .password-block {
     padding-bottom: 20px;
+    display: flex;
+        justify-content: space-evenly;
 }
 
 .password_confirmation-block {
     padding-bottom: 20px;
+    display: flex;
+        justify-content: space-evenly;
 }
 
 .bio-block {
     padding-bottom: 20px;
+    display: flex;
+        justify-content: space-evenly;
 }
 
 .images {
@@ -368,7 +378,8 @@ input.post.png {
 .images-block {
     padding-bottom: 20px;
     display: flex;
-        margin-left: 40%;
+        margin-left: 10%;
+            justify-content: space-evenly;
 }
 
 input.update {
@@ -376,6 +387,7 @@ input.update {
     color: #fff;
     width: 150px;
     border-radius: 10px;
+    margin-right: 15%;
 }
 
 /* ユーザ検索 */

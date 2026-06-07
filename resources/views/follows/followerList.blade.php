@@ -9,10 +9,10 @@
 <hr style="border: 0; border-top: 7px solid #ccc;">
 
  @foreach($followed as $followed)
- <p>{{ $followed->icon_image }}</p>
+ <p>{{ $followed->images }}</p>
  <p>{{ $followed->username}}</p>
  <a href="/user/{{$followed->id}}/profile">
-   <img src="images/icon2.png">
+   <img src="{{ asset('images/'.$followed_post->user->icon_image) }}"></a></div>
  </a>
  @endforeach
  <hr style="border: 0; border-top: 7px solid #ccc;">
