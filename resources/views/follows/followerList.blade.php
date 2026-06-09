@@ -8,15 +8,6 @@
 </div>
 <hr style="border: 0; border-top: 7px solid #ccc;">
 
- @foreach($followed as $followed)
- <p>{{ $followed->images }}</p>
- <p>{{ $followed->username}}</p>
- <a href="/user/{{$followed->id}}/profile">
-   <img src="{{ asset('images/'.$followed_post->user->icon_image) }}"></a></div>
- </a>
- @endforeach
- <hr style="border: 0; border-top: 7px solid #ccc;">
-
 @foreach($followed_post as $followed_post)
  <table class="table table-hover">
 <div class="post-date">
