@@ -132,6 +132,15 @@ input.post_image {
     height: 48px;
 }
 
+/* フォロワーリスト */
+.icon {
+    display: flex;
+    margin-left: 5%;
+}
+
+.post_post1 {
+    margin-left: 10%;
+}
 .post-date {
     display: flex;
     justify-content: flex-start;

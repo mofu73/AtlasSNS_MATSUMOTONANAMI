@@ -9,18 +9,18 @@
 <hr style="border: 0; border-top: 7px solid #ccc;">
 
 @foreach($followed_post as $followed_post)
- <table class="table table-hover">
-<div class="post-date">
-  <div class="icons">
+ <table class="table table_hover">
+<div class="post_date">
+  <div class="icon">
  <a href="/user/{{$followed->id}}/profile">
    <img src="images/icon1.png">
  </a>
- <p class="post-name">{{ $followed_post->user->username }}</p>
- <p class="time">{{ $followed_post->created_at }}</p>
+ <p class="post_name">{{ $followed_post->user->username }}</p>
+ <p class="time_follow">{{ $followed_post->created_at }}</p>
 </div>
 <tr>
    <td></td>
- <p class="post-post">{{ $followed_post->post }}</p>
+ <p class="post_post1">{{ $followed_post->post }}</p>
 </tr>
 </table>
 @endforeach
