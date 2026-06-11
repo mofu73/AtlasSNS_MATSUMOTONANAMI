@@ -11,12 +11,10 @@
 @foreach($followed_post as $followed_post)
  <table class="table table_hover">
 <div class="post_date">
-  <div class="icon">
- <a href="/user/{{$followed->id}}/profile">
-   <img src="images/icon1.png">
- </a>
+  <div class="icon"> <a href="/user/{{$followed_post->user->id}}/profile">
+    <img src="{{ asset('images/'.$followed_post->user->icon_image) }}"></a></div>
  <p class="post_name">{{ $followed_post->user->username }}</p>
- <p class="time_follow">{{ $followed_post->created_at }}</p>
+ <p class="time_follower">{{ $followed_post->created_at }}</p>
 </div>
 <tr>
    <td></td>

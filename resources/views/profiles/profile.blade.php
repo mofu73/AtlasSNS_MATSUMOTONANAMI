@@ -8,6 +8,7 @@
           </ul>
         </div>
     @endif
+    <div class="profile_icon"><img src="{{ asset('images/icon1.png') }}" class="icon1" value="アイコン"></div>
     <section id="contact">
      <form action="/profile" enctype="multipart/form-data" method="post">
       <div class="name-block">

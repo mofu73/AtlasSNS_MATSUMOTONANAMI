@@ -133,13 +133,22 @@ input.post_image {
 }
 
 /* フォロワーリスト */
-.icon {
+.post_date {
     display: flex;
-    margin-left: 5%;
-}
+    justify-content: flex-start;
+    }
+
 
 .post_post1 {
     margin-left: 10%;
+}
+.time_follower {
+    margin-left: 7%;
+}
+
+.icon {
+    text-align: center;
+    margin-left: 5%;
 }
 .post-date {
     display: flex;
@@ -258,10 +267,12 @@ input.post.png {
 
 .home {
     padding-top: 15px;
+    color: #727272
 }
 
 .logout {
     padding-top: 15px;
+        color: #727272
 }
 
 .profile {
@@ -269,6 +280,7 @@ input.post.png {
     gap: 16px;
     justify-content: flex-start;
     padding-top: 10px;
+        color: #727272
 }
 
 .profile-users {
@@ -285,17 +297,26 @@ input.post.png {
 .accordion-box li {
     text-align: center;
     align-items: center;
-    height: 50px;
+    height: 10vh;
+        border-bottom: 2px solid navy;
+        padding-top: 25px;
 }
 .accordion-box {
     background-color: #fff;
     line-height: 1.5;
     right: 1%;
-    bottom: o;
-    width: 18vw;
-        border: 2px solid blue;
+    /* bottom: o; */
+        width: 16vw;
+        border: 2px solid navy;
 }
 
+.accordion-box li:hover {
+    background-color: navy;
+}
+
+.accordion-box li:hover a {
+    color: #fff;
+}
 /* 矢印 */
 .accordion-title {
     position: absolute;
@@ -350,6 +371,11 @@ input.post.png {
     max-width: 100%;
 }
 
+.profile_icon {
+    margin-left: 10%;
+    position: relative;
+    top: 20%;
+}
 
 .name-block {
     padding-bottom: 20px;
@@ -456,7 +482,6 @@ input .form {
     margin-top: 2%;
     letter-spacing: 0.8px;
     border-bottom: 2px solid #000;
-    justify-content: space-evenly;
         flex-direction: row;
         align-items: center;
 }
@@ -464,12 +489,16 @@ input .form {
 .users_btn {
     margin-top: 5%;
     margin-bottom: 2%;
+    margin-left: 55%;
 }
 
 .users-bio {
     display: block;
 }
 
+.profiles {
+    margin-left: 3%;
+}
 .date_time {
     margin-left: 5%;
 }
@@ -481,6 +510,7 @@ input .form {
     height: 55px;
     border-radius: 50%;
     object-fit: cover;
+    margin-left: 10%;
 }
 
 .pull-right {
