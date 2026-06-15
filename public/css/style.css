@@ -96,6 +96,17 @@ header{
 .post_post {
     margin-left: 15%;
 }
+.post_name {
+    width: 70%;
+}
+
+.time_follower {
+    margin-left: 7%;
+}
+
+.users-name {
+    word-spacing: 18em;
+}
 #container{
     border-right: 1px solid #000;
     flex: 1%;
@@ -168,11 +179,15 @@ input.post_image {
 }
 
 .users_name {
-    margin-left: 5%;
-}
+    margin-right: 750px;
+    }
+
 .icons {
     text-align: center;
     margin-left: 5%;
+}
+.date {
+    margin-left: 100px;
 }
 .Trash {
     width: 60px;
@@ -290,10 +305,7 @@ input.post.png {
     align-items: center;
 }
 
-.profile-info {
-    display: flex;
-    align-items: center;
-}
+
 .accordion-box li {
     text-align: center;
     align-items: center;
@@ -308,6 +320,7 @@ input.post.png {
     /* bottom: o; */
         width: 16vw;
         border: 2px solid navy;
+        margin-right: 15px;
 }
 
 .accordion-box li:hover {
@@ -380,32 +393,37 @@ input.post.png {
 .name-block {
     padding-bottom: 20px;
     display: flex;
-        justify-content: space-evenly;
+        justify-content: flex-start;
+            margin-left: 30%;
 }
 
 .mail-block {
     padding-bottom: 20px;
     display: flex;
-        justify-content: space-evenly;
+        justify-content: start;
+            margin-left: 30%;
 }
 
 .password-block {
     padding-bottom: 20px;
     display: flex;
-        justify-content: space-evenly;
+        justify-content: start;
+            margin-left: 30%;
 }
 
 .password_confirmation-block {
     padding-bottom: 20px;
     display: flex;
-        justify-content: space-evenly;
+        justify-content: start;
+            margin-left: 30%;
 }
 
 .bio-block {
     padding-bottom: 20px;
     display: flex;
-        justify-content: space-evenly;
-}
+        justify-content: start;
+            margin-left: 30%;
+        }
 
 .images {
     margin-left: 10%;
@@ -413,8 +431,8 @@ input.post.png {
 .images-block {
     padding-bottom: 20px;
     display: flex;
-        margin-left: 10%;
-            justify-content: space-evenly;
+        margin-left: 30%;
+            justify-content: start;
 }
 
 input.update {
@@ -425,6 +443,54 @@ input.update {
     margin-right: 15%;
 }
 
+.name-block input {
+    width: 50%;
+}
+
+.mail-block input {
+    width: 50%;
+}
+
+.password-block input {
+    width: 50%;
+}
+
+.password_confirmation-block input {
+    width: 50%;
+}
+
+.bio-block input {
+    width: 50%;
+}
+
+.images-block input {
+    width: 50%;
+    background-color: #fff;
+}
+
+.name-block label {
+    margin-right: 10%;
+}
+
+.mail-block label {
+    margin-right: 7%;
+}
+
+.password-block label {
+    margin-right: 10%;
+}
+
+.password_confirmation-block label {
+    margin-right: 7%;
+}
+
+.bio-block label {
+    margin-right: 11.5%;
+}
+
+.images-block label {
+    margin-right: 11.5%;
+}
 /* ユーザ検索 */
 .search_area {
     display: flex;
@@ -489,7 +555,7 @@ input .form {
 .users_btn {
     margin-top: 5%;
     margin-bottom: 2%;
-    margin-left: 55%;
+    margin-left: 40%;
 }
 
 .users-bio {
@@ -499,9 +565,7 @@ input .form {
 .profiles {
     margin-left: 3%;
 }
-.date_time {
-    margin-left: 5%;
-}
+
 .bio_user {
     line-height: 30px;
 }
@@ -525,20 +589,18 @@ input .form {
 
 .profile-info {
     letter-spacing: 2px;
+    display: flex;
+        align-items: center;
 }
 .profile-info h4 {
     margin: 0;
     font-size: 20px;
 }
 
-.profile-info p {
-    margin: 4px 0 0;
-}
 
 .profile-info td {
     text-align: right;
 }
-
 
 #modal_open {
     display: none;

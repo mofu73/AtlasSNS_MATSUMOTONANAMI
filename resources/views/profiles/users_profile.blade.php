@@ -32,7 +32,7 @@
  <div class="profile-info">
   @csrf
   <p class="users_name">{{ $post->user->username }}</p>
-  <p class="date_time">{{ $post->created_at->format('Y/m/d H:i:s') }}</p>
+  <p class="date">{{ $post->created_at->format('Y/m/d H:i:s') }}</p>
  </div>
 </div>
   <p class="post_post">{{ $post->post }}</p>
