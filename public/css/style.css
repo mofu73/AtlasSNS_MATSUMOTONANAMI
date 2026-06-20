@@ -179,7 +179,8 @@ input.post_image {
 }
 
 .users_name {
-    margin-right: 750px;
+    margin-right: 730px;
+        margin-left: 15px;
     }
 
 .icons {
@@ -466,6 +467,9 @@ input.update {
 .images-block input {
     width: 50%;
     background-color: #fff;
+    display: inline-block;
+        text-align: center;
+        border: 1px solid #000;
 }
 
 .name-block label {
@@ -489,7 +493,7 @@ input.update {
 }
 
 .images-block label {
-    margin-right: 11.5%;
+    margin-right: 1%;
 }
 /* ユーザ検索 */
 .search_area {
