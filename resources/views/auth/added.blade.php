@@ -3,9 +3,9 @@
     @if (Auth::check())
     <p>{{\Auth::user()->username}}さん</p>
     @endif
-    <p>ようこそ！AtlasSNSへ！</p>
-    <p>ユーザー登録が完了しました。</p>
-    <p>早速ログインをしてみましょう。</p>
+    <p class="welcome">ようこそ！AtlasSNSへ！</p>
+    <p class="">ユーザー登録が完了しました。</p>
+    <p class="news">早速ログインをしてみましょう。</p>
 
     <p class="btn_login"><a href="login">ログイン画面へ</a></p>
   </div>
