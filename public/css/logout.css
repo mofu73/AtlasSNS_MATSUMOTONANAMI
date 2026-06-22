@@ -90,3 +90,11 @@ label,
 a {
     color: #fff;
 }
+
+.finish {
+    margin-top: 10%;
+}
+
+.btn_login {
+    padding-bottom: 10%;
+}

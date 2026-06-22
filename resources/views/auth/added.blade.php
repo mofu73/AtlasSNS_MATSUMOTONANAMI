@@ -4,9 +4,9 @@
     <p>{{\Auth::user()->username}}さん</p>
     @endif
     <p class="welcome">ようこそ！AtlasSNSへ！</p>
-    <p class="">ユーザー登録が完了しました。</p>
+    <p class="finish">ユーザー登録が完了しました。</p>
     <p class="news">早速ログインをしてみましょう。</p>
 
-    <p class="btn_login"><a href="login">ログイン画面へ</a></p>
+    <p class="btn_login" a href="login">ログイン画面へ</a></p>
   </div>
 </x-logout-layout>
