@@ -7,6 +7,6 @@
     <p class="finish">ユーザー登録が完了しました。</p>
     <p class="news">早速ログインをしてみましょう。</p>
 
-    <p class="btn_login" a href="login">ログイン画面へ</a></p>
+    {{ Form::submit('ログイン画面へ',['class' => 'btn btn-danger']) }}
   </div>
 </x-logout-layout>
