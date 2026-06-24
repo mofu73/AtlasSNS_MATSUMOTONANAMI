@@ -23,10 +23,10 @@
 {{ Form::email('email',null,['class' => 'input-register']) }}
 
 {{ Form::label('パスワード') }}
-{{ Form::password('password',null,['class' => 'password']) }}
+{{ Form::password('password',['class' => 'password']) }}
 
 {{ Form::label('パスワード確認') }}
-{{ Form::password('password_confirmation',null,['class' => 'confirmation']) }}
+{{ Form::password('password_confirmation',['class' => 'confirmation']) }}
 
 {{ Form::submit('新規登録',['class' => 'btn btn-danger']) }}
 </div>
