@@ -94,10 +94,11 @@ header{
     flex-flow: row wrap;
 }
 .post_post {
-    margin-left: 16%;
+    margin-left: 12.5%;
 }
 .post_name {
     width: 70%;
+    margin-left: 3%;
 }
 
 .time_follower {
@@ -109,6 +110,7 @@ header{
 }
 #container{
     border-right: 1px solid #000;
+    min-height: 100vh;
     flex: 1%;
     }
 
@@ -389,6 +391,7 @@ input.post.png {
     margin-left: 5%;
     position: relative;
     top: 20%;
+    z-index: -1;
 }
 
 .name-block {
@@ -427,7 +430,7 @@ input.post.png {
         }
 
 .images {
-    margin-left: 10%;
+    margin-left: 7.5%;
 }
 .images-block {
     padding-bottom: 20px;
@@ -551,7 +554,6 @@ input .form {
     display: flex;
     margin-top: 2%;
     letter-spacing: 0.8px;
-    border-bottom: 2px solid #000;
         flex-direction: row;
         align-items: center;
 }
@@ -616,10 +618,11 @@ input .form {
 
 #modal_main {
     background-color: #fff;
+    height: 350px;
     margin: 5%;
-        bottom: 5%;
     position: absolute;
-    top: 30%;
+    top: 15%;
+        bottom: 5%;
     left: 20%;
     border-radius: 10px;
         width: 50%

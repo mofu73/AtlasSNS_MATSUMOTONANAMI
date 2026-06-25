@@ -13,7 +13,7 @@
      <form action="/profile" enctype="multipart/form-data" method="post">
       <div class="name-block">
           <label class="contact-text" for="name">ユーザー名</label>
-          <input id="name" class="name" type="name" name="username" value="{{ Auth::user()->username }}">
+          <input id="name" class="name" type="text" name="username" value="{{ Auth::user()->username }}">
       </div>
 
       <div class="mail-block">
@@ -28,7 +28,7 @@
 
       <div class="password_confirmation-block">
           <label class="contact-text" for="password_confirmation">パスワード確認</label>
-          <input id="password_confirmation" class="password_confirmation" type="password_confirmation" name="password_confirmation" value="">
+          <input id="password_confirmation" class="password_confirmation" type="password" name="password_confirmation" value="">
       </div>
 
       <div class="bio-block">

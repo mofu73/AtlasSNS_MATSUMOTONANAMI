@@ -15,7 +15,7 @@ class FollowsController extends Controller
     public function follow(Request $request){
         $following_id = Auth::user()->follows()->pluck('followed_id');
         $followings = User::WhereIn('id', $following_id)->get();
-        $followings_post = Post::query()->WhereIn('user_id', Auth::user()->follows()->pluck('followed_id'))->latest()->get();
+        $followings_post = Post::query()->WhereIn('user_id', Auth::user()->follows()->pluck('followed_id'))->latest()->get()->sortByDesc('created_at');
         return view ('follows.followList', ['followings'=>$followings, 'followings_post'=>$followings_post,]);
     }
 
@@ -23,7 +23,7 @@ class FollowsController extends Controller
     public function followed(){
             $followed_id = Auth::user()->followUsers()->pluck('following_id');
             $followed = User::WhereIn('id', $followed_id)->get();
-            $followed_post = Post::query()->WhereIn('user_id', Auth::user()->followUsers()->pluck('following_id'))->latest()->get();
+            $followed_post = Post::query()->WhereIn('user_id', Auth::user()->followUsers()->pluck('following_id'))->latest()->get()->sortByDesc('created_at');
         return view ('follows.followerList', ['followed'=>$followed, 'followed_post'=>$followed_post]);
     }
 

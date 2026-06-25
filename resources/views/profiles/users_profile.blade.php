@@ -20,22 +20,20 @@
 @endif
 </div>
 </div>
-
+<hr style="border: 0; border-top: 7px solid #ccc;">
 
 @foreach($post as $post)
-<div class="profile-users">
- <tr>
-  <div>
-   <a><img src="{{ asset('images/icon2.png') }}" class="icon2_image5" value="アイコン"></a>
-  </div>
-
- <div class="profile-info">
-  @csrf
-  <p class="users_name">{{ $post->user->username }}</p>
-  <p class="date">{{ $post->created_at->format('Y/m/d H:i:s') }}</p>
- </div>
+<table class="table table-hover">
+<div class="post_date">
+  <div class="icons"> <a href="/user/{{$post->user->id}}/profile">
+    <img src="{{ asset('images/'.$post->user->icon_image) }}"></a></div>
+ <p class="post_name">{{ $post->user->username}}</p>
+ <p class="time">{{ $post->created_at }}</p>
 </div>
-  <p class="post_post">{{ $post->post }}</p>
+<tr>
+   <td></td>
+ <p class="post_post">{{ $post->post }}</p>
 </tr>
+</table>
 @endforeach
 </x-login-layout>

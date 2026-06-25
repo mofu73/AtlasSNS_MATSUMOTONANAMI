@@ -15,7 +15,7 @@ class PostsController extends Controller
         $user = Auth::user();//ログインしてるユーザー情報取得
         $post = Post::get();
         $following_id = Auth::user()->follows()->pluck('followed_id');
-        $post = Post::with('user')->whereIn('user_id', $user)->orWhereIn('user_id', $following_id)->get();//フォローしているユーザーidの投稿内容を取得
+        $post = Post::with('user')->whereIn('user_id', $user)->orWhereIn('user_id', $following_id)->get()->sortByDesc('created_at');//フォローしているユーザーidの投稿内容を取得
         return view('posts.index',['posts'=>$post]);
     }
 

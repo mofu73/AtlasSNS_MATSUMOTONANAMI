@@ -13,7 +13,7 @@
 <div class="post_date">
   <div class="icon"> <a href="/user/{{$followed_post->user->id}}/profile">
     <img src="{{ asset('images/'.$followed_post->user->icon_image) }}"></a></div>
- <p class="post_name">{{ $followed_post->user->username }}</p>
+ <p class="post-name">{{ $followed_post->user->username }}</p>
  <p class="time_follower">{{ $followed_post->created_at }}</p>
 </div>
 <tr>

@@ -32,15 +32,18 @@ class ProfileController extends Controller
             'password' => 'required|between:8,20|alpha_num|confirmed',
             'password_confirmation' => 'required',
             'bio' => 'between:1,150',
-            'images' => 'mimes:jpg, png, bmp, gif, svg',
+            'images' => 'mimes:jpg,png,bmp,gif,svg',
         ]);
 
         $up_username = $request->input('username');
         $up_email = $request->input('email');
         $up_password = Hash::make($request->password);
         $up_bio = $request->input('bio');
+        $up_images = Auth::user()->icon_image;
+        if($request->hasFile('images')){
         $images = $request->file('images')->getClientOriginalName();
         $up_images = $request->images->storeAs('',$images);
+        }
         $user_id = Auth::id();
 
         User::where('id', $user_id)->update

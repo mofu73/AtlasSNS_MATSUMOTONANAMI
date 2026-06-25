@@ -16,7 +16,7 @@
 <div class="post-date">
      <div class="icons"><img src="images/icon1.png" class="post_icon"></div>
      <p class="post-name">{{ $post->user->username }}</p>
-     <p class="time">{{ $post->created_at }}</p>
+     <p class="time">{{ $post->created_at->format('Y/m/d H:i') }}</p>
 </div>
 <tr>
   <td></td>
