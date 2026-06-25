@@ -55,7 +55,7 @@ body{
 
 .btn {
     margin-top: 5%;
-    margin-left: 35%;
+    margin-left: 50%;
     width: 45%;
 }
 
@@ -77,7 +77,6 @@ label {
 label,
 .input {
     display: block;
-    margin-left: 10%;
 }
 .atlas_ima .register {
     color: #fff;
