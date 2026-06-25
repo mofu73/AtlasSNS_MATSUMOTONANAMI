@@ -264,6 +264,20 @@ input.post.png {
     /* padding: 30px 22.5px 42px 22.5px; */
 }
 
+.icon1 {
+    width: 80px;
+    height: 70px;
+}
+
+.icon-post {
+    width: 80px;
+    height: 70px;
+}
+
+.icon1-post {
+    width: 80px;
+    height: 80px;
+}
 .accordion-list {
     color: #fff;
     font-size: 16px;

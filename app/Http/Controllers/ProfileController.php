@@ -42,7 +42,7 @@ class ProfileController extends Controller
         $up_images = Auth::user()->icon_image;
         if($request->hasFile('images')){
         $images = $request->file('images')->getClientOriginalName();
-        $up_images = $request->images->storeAs('',$images);
+        $up_images = $request->images->storeAs('',$images,'public');
         }
         $user_id = Auth::id();
 

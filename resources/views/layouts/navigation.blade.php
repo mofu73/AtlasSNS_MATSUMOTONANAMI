@@ -18,5 +18,9 @@
                 </dl>
                </div>
             </div>
+            @if(Auth::user()->icon_image=='icon1.png')
             <img src="{{ asset('images/icon1.png') }}" class="icon1" value="アイコン">
+            @else
+            <img src="{{ asset('storage/'.Auth::user()->icon_image) }}" class="icon1" value="アイコン">
+            @endif
          </div>
