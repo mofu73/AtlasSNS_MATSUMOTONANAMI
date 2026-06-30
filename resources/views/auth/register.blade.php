@@ -17,10 +17,10 @@
     @endif
 <div class="register_form">
 {{ Form::label('ユーザー名') }}
-{{ Form::text('username',null,['class' => 'input-register']) }}
+{{ Form::text('username',null,['class' => 'name-register']) }}
 
 {{ Form::label('メールアドレス') }}
-{{ Form::email('email',null,['class' => 'input-register']) }}
+{{ Form::email('email',null,['class' => 'email']) }}
 
 {{ Form::label('パスワード') }}
 {{ Form::password('password',['class' => 'password']) }}
@@ -28,7 +28,7 @@
 {{ Form::label('パスワード確認') }}
 {{ Form::password('password_confirmation',['class' => 'confirmation']) }}
 
-{{ Form::submit('新規登録',['class' => 'btn btn-danger']) }}
+{{ Form::submit('新規登録',['class' => 'btn btn-danger1']) }}
 </div>
 
 <p class="login_back"><a href="/login">ログイン画面に戻る</a></p>

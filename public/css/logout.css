@@ -59,6 +59,13 @@ body{
     width: 45%;
 }
 
+.btn-danger1 {
+    color: #fff;
+    background-color: #bf5329;
+    border-color: #aa4a24;
+    width: 120px;
+    margin-right: 9%;
+}
 .login_back {
     margin-top: 10%;
     padding-bottom: 5%;
@@ -101,16 +108,24 @@ a {
 
 .login_back5 {
     color: #fff;
-    background-color: #bf5329;
     border-color: #aa4a24;
 }
 
+.email {
+    width: 250px;
+    border-radius: 5px;
+}
+
+.name-register {
+    width: 250px;
+    border-radius: 5px;
+}
 .password {
-    margin-right: 15%;
-    width: 200px;
+    width: 250px;
+        border-radius: 5px;
 }
 
 .confirmation {
-    margin-right: 15%;
-    width: 200px;
-}
+    width: 250px;
+        border-radius: 5px;
+    }
