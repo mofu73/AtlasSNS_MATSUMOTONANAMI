@@ -12,7 +12,7 @@
 @foreach ($posts as $post)
 <table class="table table-hover">
 <div class="post-date">
-     <div class="icons"><img src="{{ asset('images/'.Auth::user()->icon_image) }}" class="post_icon"></div>
+     <div class="icons"><img src="{{ asset('images/'.Auth::user()->images) }}" class="post_icon"></div>
      <p class="post-name">{{ $post->user->username }}</p>
      <p class="time">{{ $post->created_at->format('Y/m/d H:i') }}</p>
 </div>

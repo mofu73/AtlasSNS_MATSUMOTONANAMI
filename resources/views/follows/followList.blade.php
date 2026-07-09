@@ -4,7 +4,8 @@
 <div class="">
    <h1>フォローリスト</h1>
    @foreach($followings as $following)
-    <img src="{{ asset('images/'.$following->icon_image) }}">
+    <img src="{{ asset('public/images/icons/'.$following->icon_image) }}"
+     alt="{{ $following->name }}" class="icon">
    @endforeach
 </div>
 <hr style="border: 0; border-top: 7px solid #ccc;">
