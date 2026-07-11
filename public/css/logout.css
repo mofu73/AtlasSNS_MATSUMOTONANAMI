@@ -67,6 +67,10 @@ body{
     width: 45%;
 }
 
+#clear .btn {
+    margin-left: 0;
+    margin-bottom: 10%;
+}
 .btn-danger1 {
     color: #fff;
     background-color: #bf5329;
@@ -87,6 +91,10 @@ label {
     width: 100px;
 }
 
+.register_form label {
+    margin-left: 10%;
+    margin-top: 5%;
+}
 .button.input {
     width: 200px;
 }

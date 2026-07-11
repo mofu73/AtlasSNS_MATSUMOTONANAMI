@@ -7,7 +7,7 @@
     <p class="finish">ユーザー登録が完了しました。</p>
     <p class="news">早速ログインをしてみましょう。</p>
 
-    <p class="login_back5"><a href="/login">ログイン画面へ</a></p>
+    <button type="submit" class="btn btn-danger pull-center"><a href="/login">ログイン画面へ</a></button>
 
   </div>
 </x-logout-layout>
