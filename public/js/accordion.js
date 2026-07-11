@@ -18,7 +18,7 @@ $(function () {
     var post = $(this).attr('post');
     var post_id = $(this).attr('post_id');
 
-    $('.form-control').val(post);
+    $('.form-control1').val(post);
     $('.up_id').val(post_id);
   });
 });

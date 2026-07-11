@@ -32,6 +32,7 @@
      <p class="post-post">{{ $post->post }}</p>
 </tr>
    <!-- 更新　-->
+    @if($post->user_id == Auth::user()->id)
    <div class="content">
    <a href="#" class="js-modal-open"  post="{{ $post->post }}" post_id="{{ $post->id }}">
     <img src="images/edit.png" class="edit_image" alt="編集">
@@ -40,6 +41,7 @@
    <!-- 削除-->
    <a class="btn btn danger" href="/post/{{$post->id}}/delete" onclick="return confirm('この投稿を削除します。よろしいでしょうか？')">
     <span class="Trash" src="images/trash.png" alt="削除"></span></a>
+    @endif
 </tr>
 </table>
 @csrf
