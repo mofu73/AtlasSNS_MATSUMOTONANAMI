@@ -2,7 +2,11 @@
 <div id="container_post">
     {!! Form::open(['url' => '/create']) !!}
   <div class="form-group">
-  <img  class="icon-post" src="images/icon1.png"></a>
+  @if(Auth::user()->icon_image=='icon1.png')
+    <img src="{{ asset('images/icon1.png') }}" class="icon1" value="アイコン">
+            @else
+            <img src="{{ asset('storage/'.Auth::user()->icon_image) }}" class="icon2" value="アイコン">
+            @endif
       {{ Form::input('text', 'newPost', null,['required', 'class' => 'form-control', 'placeholder' => '投稿内容を入力してください。'])}}
       <input type="image" class="post_image" src="/images/post.png" value="投稿" >
   </div>
@@ -12,7 +16,14 @@
 @foreach ($posts as $post)
 <table class="table table-hover">
 <div class="post-date">
-     <div class="icons"><img src="{{ asset('images/'.Auth::user()->images) }}" class="post_icon"></div>
+     <div class="icons">
+    @if($post->user->icon_image=='icon1.png')
+    <img src="{{ asset('images/icon1.png') }}" class="icon1" value="アイコン">
+            @else
+            <img src="{{ asset('storage/'.$post->user->icon_image) }}" class="icon2" value="アイコン">
+            @endif
+</a>
+</div>
      <p class="post-name">{{ $post->user->username }}</p>
      <p class="time">{{ $post->created_at->format('Y/m/d H:i') }}</p>
 </div>

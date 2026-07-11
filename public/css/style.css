@@ -106,7 +106,7 @@ header{
 }
 
 .users-name {
-    word-spacing: 18em;
+    word-spacing: 14em;
 }
 #container{
     border-right: 1px solid #000;
@@ -581,6 +581,7 @@ input .form {
 
 .users-bio {
     display: block;
+    word-spacing: 15em;
 }
 
 .profiles {

@@ -8,7 +8,13 @@
           </ul>
         </div>
     @endif
-    <div class="profile_icon"><img src="{{ asset('images/icon1.png') }}" class="icon1" value="アイコン"></div>
+    <div class="profile_icon">
+    @if(Auth::user()->icon_image=='icon1.png')
+    <img src="{{ asset('images/icon1.png') }}" class="icon1" value="アイコン">
+            @else
+            <img src="{{ asset('storage/'.Auth::user()->icon_image) }}" class="icon2" value="アイコン">
+            @endif
+        </div>
     <section id="contact">
      <form action="/profile" enctype="multipart/form-data" method="post">
       <div class="name-block">

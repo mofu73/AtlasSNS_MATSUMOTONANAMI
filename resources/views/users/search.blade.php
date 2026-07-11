@@ -16,10 +16,10 @@
   @foreach ($query as $query)
   <div class="flex">
   @if($query->id !== Auth::user()->id)
-  @if($followed->icon_image=='icon1.png')
+  @if($query->icon_image=='icon1.png')
     <img src="{{ asset('images/icon1.png') }}" class="icon1" value="アイコン">
             @else
-            <img src="{{ asset('storage/'.$following->icon_image) }}" class="icon2" value="アイコン">
+            <img src="{{ asset('storage/'.$query->icon_image) }}" class="icon2" value="アイコン">
             @endif
 </a>
   <p class="search_username">{{ $query->username}}</p>

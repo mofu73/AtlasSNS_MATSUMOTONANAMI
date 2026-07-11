@@ -17,12 +17,13 @@
  <table class="table table-hover">
 <div class="post-date">
   <div class="icons"> <a href="/user/{{$following_post->user->id}}/profile">
-    @if($followed->icon_image=='icon1.png')
+    @if($following_post->user->icon_image=='icon1.png')
     <img src="{{ asset('images/icon1.png') }}" class="icon1" value="アイコン">
             @else
-            <img src="{{ asset('storage/'.$following->icon_image) }}" class="icon2" value="アイコン">
+            <img src="{{ asset('storage/'.$following_post->user->icon_image) }}" class="icon2" value="アイコン">
             @endif
 </a>
+</div>
  <p class="post-name">{{ $following_post->user->username}}</p>
  <p class="time">{{ $following_post->created_at }}</p>
 </div>

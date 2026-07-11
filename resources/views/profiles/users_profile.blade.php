@@ -1,7 +1,11 @@
 <x-login-layout>
 
 <div class="users_container">
-    <img src="{{ asset('images/icon2.png') }}" class="icon2_image" value="アイコン">
+    @if($users->icon_image=='icon1.png')
+    <img src="{{ asset('images/icon1.png') }}" class="icon1" value="アイコン">
+            @else
+            <img src="{{ asset('storage/'.$users->icon_image) }}" class="icon2" value="アイコン">
+            @endif
     <div class="profiles">
      <p class="users-name">ユーザー名 {{ $users->username }} </p>
      <p class="users-bio">自己紹介 {{ $users->bio }}</p>
