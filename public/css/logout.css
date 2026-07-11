@@ -67,6 +67,9 @@ body{
     width: 45%;
 }
 
+.msg {
+    margin-top: 5%;
+}
 #clear .btn {
     margin-left: 0;
     margin-bottom: 10%;
