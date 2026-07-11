@@ -264,9 +264,15 @@ input.post.png {
     /* padding: 30px 22.5px 42px 22.5px; */
 }
 
-.icon1 {
-    width: 80px;
+.icon2 {
+    width: 70px;
     height: 70px;
+    border-radius: 50%;
+}
+.icon1 {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
 }
 
 .icon1-post {

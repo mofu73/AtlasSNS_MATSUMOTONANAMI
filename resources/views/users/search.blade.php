@@ -16,7 +16,12 @@
   @foreach ($query as $query)
   <div class="flex">
   @if($query->id !== Auth::user()->id)
-  <a><img src="images/icon2.png"></a>
+  @if($followed->icon_image=='icon1.png')
+    <img src="{{ asset('images/icon1.png') }}" class="icon1" value="アイコン">
+            @else
+            <img src="{{ asset('storage/'.$following->icon_image) }}" class="icon2" value="アイコン">
+            @endif
+</a>
   <p class="search_username">{{ $query->username}}</p>
   @if(!auth()->user()->isFollowing($query->id))
   <form action="/search.blade/{{ $query->id }}/follow" method="post">

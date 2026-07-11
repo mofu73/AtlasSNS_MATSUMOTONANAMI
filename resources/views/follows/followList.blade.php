@@ -4,8 +4,11 @@
 <div class="">
    <h1>フォローリスト</h1>
    @foreach($followings as $following)
-    <img src="{{ asset('public/images/icons/'.$following->icon_image) }}"
-     alt="{{ $following->name }}" class="icon">
+    @if($following->icon_image=='icon1.png')
+            <img src="{{ asset('images/icon1.png') }}" class="icon1" value="アイコン">
+            @else
+            <img src="{{ asset('storage/'.$following->icon_image) }}" class="icon2" value="アイコン">
+            @endif
    @endforeach
 </div>
 <hr style="border: 0; border-top: 7px solid #ccc;">
@@ -14,7 +17,12 @@
  <table class="table table-hover">
 <div class="post-date">
   <div class="icons"> <a href="/user/{{$following_post->user->id}}/profile">
-    <img src="{{ asset('images/'.$following_post->user->icon_image) }}"></a></div>
+    @if($followed->icon_image=='icon1.png')
+    <img src="{{ asset('images/icon1.png') }}" class="icon1" value="アイコン">
+            @else
+            <img src="{{ asset('storage/'.$following->icon_image) }}" class="icon2" value="アイコン">
+            @endif
+</a>
  <p class="post-name">{{ $following_post->user->username}}</p>
  <p class="time">{{ $following_post->created_at }}</p>
 </div>
