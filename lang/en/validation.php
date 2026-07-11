@@ -32,7 +32,7 @@ return [
         'string' => ' :attributeは :min文字以上:max文字未満で登録してください。',
     ],
     'boolean' => 'The :attribute field must be true or false.',
-    'confirmed' => 'The :attribute confirmation does not match.',
+    'confirmed' => ' :attribute と一致していません。.',
     'current_password' => 'The password is incorrect.',
     'date' => 'The :attribute is not a valid date.',
     'date_equals' => 'The :attribute must be a date equal to :date.',
@@ -182,7 +182,7 @@ return [
     */
 
     'attributes' => [
-        'name' => 'お名前',
+        'username' => 'お名前',
         'email' => 'メールアドレス',
         'password' => 'パスワード',
         'password_confirmation' => 'パスワード確認',
